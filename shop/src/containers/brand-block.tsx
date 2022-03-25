@@ -79,6 +79,8 @@ const BrandBlock: React.FC<BrandProps> = ({
 									</SwiperSlide>
 							))
 							: sliderBrand?.map((brand) => (
+								// console.log("imagess", brand.images)
+								
 									<SwiperSlide key={`brand--key${brand.id}`}>
 										<Card
 											item={brand}
