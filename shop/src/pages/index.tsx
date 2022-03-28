@@ -15,6 +15,7 @@ import FlashSaleBlock from "@components/product/feeds/flash-sale-product-feed";
 import BestSellerProductFeed from "@components/product/feeds/best-seller-product-feed";
 import NewArrivalsProductFeed from "@components/product/feeds/new-arrivals-product-feed";
 import TestimonialCarousel from "@containers/testimonial-carousel";
+import ProductsFlashSaleBlock from "@containers/product-flash-sale-block";
 import { useEffect } from "react";
 import { ROUTES } from "@lib/routes";
 import { useUI } from "@contexts/ui.context";
@@ -44,6 +45,10 @@ export default function Home() {
         {/* <FlashSaleBlock /> */}
         <BannerCarouselBlock banners={promotionalBanner} />
         <FeatureBlock />
+        <ProductsFlashSaleBlock 
+          date={"2023-03-01T01:02:03"} 
+          variant="slider"
+        />
         <BannerCard
           data={banner}
           href={`${ROUTES.COLLECTIONS}/${banner.slug}`}

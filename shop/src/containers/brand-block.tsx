@@ -90,7 +90,7 @@ const BrandBlock: React.FC<BrandProps> = ({
 												pathname: ROUTES.SEARCH,
 												query: { brand: brand.slug },
 											}}
-						image={filterBrandImages(brand?.images, "slider-layout")?.image?.[0]}
+											image={filterBrandImages(brand?.images, "slider-layout")?.image?.[0]}
 										/>
 									</SwiperSlide>
 							))}
