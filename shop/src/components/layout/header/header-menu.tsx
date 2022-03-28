@@ -17,7 +17,7 @@ const HeaderMenu: React.FC<MenuProps> = ({ data, className }) => {
 		<nav className={classNames(`headerMenu flex w-full relative`, className)}>
 			{data?.map((item: any) => (
 				<div
-					className={`menuItem group cursor-pointer py-7 ${
+					className={`menuItem group cursor-pointer py-0 ${
 						item.subMenu ? "relative" : ""
 					}`}
 					key={item.id}
