@@ -25,7 +25,7 @@ const Card: React.FC<Props> = ({
 	effectActive = false,
 	effectPosition = "imageOnly",
 	href,
-  image
+  	image
 }) => {
 	const { name, products_count } = item ?? {};
 	const imageSize:any = (variant === "circle" && 180) || (variant === "rounded" && 198) || (variant === "modern" && 99) || (variant === "elegant" && 48);
