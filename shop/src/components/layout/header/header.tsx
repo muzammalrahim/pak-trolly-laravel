@@ -12,6 +12,7 @@ import { authorizationAtom } from "@store/authorization-atom";
 import { menu } from "@data/static/menus";
 import TopHeader from "./topheader";
 import HeaderMenu from "@components/layout/header/header-menu";
+
 const AuthMenu = dynamic(() => import("./auth-menu"), { ssr: false });
 const CartButton = dynamic(() => import("@components/cart/cart-button"), {
 	ssr: false,
