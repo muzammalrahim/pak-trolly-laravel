@@ -10,6 +10,7 @@ import dynamic from "next/dynamic";
 import ProductSecurity from "@components/product/product-security";
 import ProductTab from "@components/product/product-tab";
 import RatingProduct from "@components/product/rating-product";
+import ProductQuestion from "@components/product/product-question";
 
 export { getStaticPaths, getStaticProps } from "@framework/ssr/product";
 
@@ -40,9 +41,10 @@ export default function ProductPage({ product }: any) {
           sectionHeading="text-related-products"
         />
         <RatingProduct rating={4}/>
-    
-        <Subscription />
+    <ProductQuestion />
+        
       </Container>
+      <Subscription />
     </>
   );
 }
