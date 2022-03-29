@@ -7,6 +7,8 @@ import Breadcrumb from "@components/common/breadcrumb";
 import { useRouter } from "next/router";
 import Spinner from "@components/ui/loaders/spinner/spinner";
 import dynamic from "next/dynamic";
+import ProductSecurity from "@components/product/product-security";
+import ProductTab from "@components/product/product-tab";
 
 export { getStaticPaths, getStaticProps } from "@framework/ssr/product";
 
@@ -29,11 +31,14 @@ export default function ProductPage({ product }: any) {
           <Breadcrumb />
         </div>
         <ProductSingleDetails product={product} />
+        <ProductSecurity/>
+        <ProductTab/>
         <RelatedProducts
           products={product?.related_products}
           currentProductId={product?.id}
           sectionHeading="text-related-products"
         />
+    
         <Subscription />
       </Container>
     </>
