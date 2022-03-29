@@ -17,6 +17,7 @@ import NewArrivalsProductFeed from "@components/product/feeds/new-arrivals-produ
 import TestimonialCarousel from "@containers/testimonial-carousel";
 import ProductsFlashSaleBlock from "@containers/product-flash-sale-block";
 import { SellWithProgressCardSection } from "@containers/hero-with-category-flash";
+import HomeTab from "@components/product/home-tabs";
 import { useEffect } from "react";
 import { ROUTES } from "@lib/routes";
 import { useUI } from "@contexts/ui.context";
@@ -46,10 +47,7 @@ export default function Home() {
         {/* <FlashSaleBlock /> */}
         <BannerCarouselBlock banners={promotionalBanner} />
         <FeatureBlock />
-        <ProductsFlashSaleBlock 
-          date={"2023-03-01T01:02:03"} 
-          variant="slider"
-        />
+        <HomeTab/>
         <BannerCard
           data={banner}
           href={`${ROUTES.COLLECTIONS}/${banner.slug}`}
@@ -60,7 +58,13 @@ export default function Home() {
 
         {/* <CategoryBlock sectionHeading="text-shop-by-category" /> */}
         <CategoryBlock sectionHeading="text-shop-by-category" variant="rounded" />
+        
+        
         <Container>
+        <ProductsFlashSaleBlock 
+          date={"2023-03-01T01:02:03"} 
+          variant="slider"
+        />
         <Divider />
         {/* <BestSellerProductFeed /> */}
         <BannerCard
