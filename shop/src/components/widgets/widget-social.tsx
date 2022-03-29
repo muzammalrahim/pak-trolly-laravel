@@ -19,11 +19,11 @@ const WidgetSocial: FC = () => {
       </h4> */}
       <ul className="text-xs md:text-[13px] lg:text-sm text-body flex flex-row space-y-3 lg:space-y-3.5">
         {socials?.map((social: Social, index: number) => (
-          <li key={`widget-list--key${index}`} className="flex justify-center">
+          <li key={`widget-list--key${index}`} className="flex justify-center pl-3">
             <Link href={social.url ? social.url : "#!"}>
-              <a className="transition-colors duration-200 hover:text-black">
+              <a className="text-white h-7 transition-colors duration-200 hover:text-black">
                   {social.icon && (
-                    <span className="ltr:mr-3 rtl:ml-3 relative top-0.5 lg:top-1 text-sm lg:text-base">
+                    <span className="ltr:mr-3 rtl:ml-3 relative lg:top-1 text-sm lg:text-base">
                       {getIcon({
                         iconList: socialIcons,
                         iconName: social?.icon,

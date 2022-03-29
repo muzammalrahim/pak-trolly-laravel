@@ -43,7 +43,7 @@ const breakpoints = {
 };
 
 const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
-  sectionHeading = "text-flash-sale",
+  sectionHeading = "Featured Product",
   className = "mb-12 md:mb-14 xl:mb-16",
   variant = "default",
   limit = 10,
@@ -73,7 +73,7 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
       }`}
     >
       <div className="flex justify-between items-center flex-wrap mb-5 md:mb-6">
-        <SectionHeader sectionHeading={sectionHeading} className="mb-0" />
+        <SectionHeader sectionHeading={sectionHeading} className="mb-0" ></SectionHeader>
       </div>
       {error ? (
         <Alert message={error?.message} />
@@ -114,6 +114,7 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
                 >
                   {products?.data?.map((product: Product) => (
                     <SwiperSlide key={`product--key-${product.id}`}>
+                      
                       <ProductCard className="border"
                       
                         key={`product--key${product.id}`}
@@ -122,13 +123,13 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
                         imgHeight={138}
                         variant="gridSlim"
                       />
-                      <ProductCard className="mt-5"
+                      {/* <ProductCard className="mt-5"
                         key={`product--key${product.id}`}
                         product={product}
                         imgWidth={103}
                         imgHeight={138}
                         variant="gridSlim"
-                      />
+                      /> */}
                     </SwiperSlide>
                     
                   ))}
