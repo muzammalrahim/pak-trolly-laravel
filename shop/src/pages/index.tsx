@@ -70,7 +70,7 @@ export default function Home() {
         
         
         
-          <NewArrivalsProductFeed />
+          {/* <NewArrivalsProductFeed /> */}
           <Divider />
           <TestimonialCarousel sectionHeading="text-testimonial" />
           

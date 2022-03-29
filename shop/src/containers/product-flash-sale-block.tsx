@@ -21,7 +21,7 @@ interface ProductsProps {
 
 const breakpoints = {
   "1500": {
-    slidesPerView: 5,
+    slidesPerView: 4,
     spaceBetween: 28,
   },
   "1025": {
@@ -114,14 +114,23 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
                 >
                   {products?.data?.map((product: Product) => (
                     <SwiperSlide key={`product--key-${product.id}`}>
-                      <ProductCard
+                      <ProductCard className="border"
+                      
                         key={`product--key${product.id}`}
                         product={product}
-                        imgWidth={324}
-                        imgHeight={324}
+                        imgWidth={103}
+                        imgHeight={138}
+                        variant="gridSlim"
+                      />
+                      <ProductCard className="mt-5"
+                        key={`product--key${product.id}`}
+                        product={product}
+                        imgWidth={103}
+                        imgHeight={138}
                         variant="gridSlim"
                       />
                     </SwiperSlide>
+                    
                   ))}
                 </Carousel>
               )}
