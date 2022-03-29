@@ -48,9 +48,13 @@ class AttachmentController extends CoreController
             $attachment->save();
             $attachment->addMedia($media)->toMediaCollection();
             foreach ($attachment->getMedia() as $image) {
+                $thumbnail = str_replace('storage', 'storage/app/public', $image->getUrl('thumbnail'));
+                $orignal = str_replace('storage', 'storage/app/public', $image->getUrl());
+                // dd($checking);
+
                 $converted_url = [
-                    'thumbnail' => $image->getUrl('thumbnail'),
-                    'original' => $image->getUrl(),
+                    'thumbnail' => $thumbnail,
+                    'original' => $orignal,
                     'id' => $attachment->id
                 ];
             }
