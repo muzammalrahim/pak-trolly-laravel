@@ -34,7 +34,7 @@ const TestimonialCarousel: React.FC<TestimonialsProps> = ({
 }) => {
 	return (
 		<div className={`heightFull ${className}`}>
-			<SectionHeader sectionHeading={sectionHeading} />
+			{/* <SectionHeader sectionHeading={sectionHeading} /> */}
 			<Carousel
 				autoplay={{
 					delay: 400000,

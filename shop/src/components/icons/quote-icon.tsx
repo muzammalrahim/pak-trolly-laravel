@@ -1,5 +1,5 @@
 const QuoteIcon = ({
-    color = '#efefef',
+    color = '#3C3C3C',
     width = '24px',
     height = '18px',
     className = '',
