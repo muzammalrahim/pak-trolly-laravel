@@ -90,9 +90,10 @@ const AddressForm: React.FC<any> = ({ data }) => {
         className="grid grid-cols-2 gap-5 h-full"
       >
         <div>
-          <Label>{t("text-type")}</Label>
+          {/* <Label>{t("text-type")}</Label> */}
           <div className="space-x-4 rtl:space-x-reverse flex items-center">
-            <Radio
+            <h3 className="text-heading font-semibold text-lg text-center mb-4 sm:mb-2">Billing/Shipping Adress</h3>
+            {/* <Radio
               id="billing"
               {...register("type")}
               type="radio"
@@ -105,7 +106,7 @@ const AddressForm: React.FC<any> = ({ data }) => {
               type="radio"
               value={AddressType.Shipping}
               labelKey={t("text-shipping")}
-            />
+            /> */}
           </div>
         </div>
 
@@ -153,7 +154,7 @@ const AddressForm: React.FC<any> = ({ data }) => {
           className="col-span-2"
         />
 
-        <Button className="w-full col-span-2">
+        <Button className="w-full col-span-2 bg-blue">
           {address ? t("text-update") : t("text-save")} {t("text-address")}
         </Button>
       </form>

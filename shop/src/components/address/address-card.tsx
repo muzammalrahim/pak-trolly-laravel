@@ -41,7 +41,7 @@ const AddressCard: React.FC<AddressProps> = ({ checked, address, userId }) => {
       className={classNames(
         "relative p-4 lg:p-5 xl:p-6 h-full rounded border cursor-pointer group hover:border-accent",
         {
-          "border-2 border-heading": checked,
+          "border-2 border-blue": checked,
           "bg-gray-200 border-gray-100": !checked,
         }
       )}

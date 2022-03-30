@@ -416,7 +416,7 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
           </ul>
           <div className="pt-5">
             <ul>
-              <li className="inline-block mr-3">
+              <li className="inline-block mr-3 vertical-align: middle">
                   <Button
                     onClick={addToCart}
                     variant="slim"
@@ -442,7 +442,7 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
                   </Button>
               </li>
 
-              <li className="inline-block mr-3">
+              <li className="inline-block mr-3 vertical-align: middle">
                 <button className="bg-[#E6F4F7] hover:bg-blue-700 text-blue font-bold mb-2 pl-3 pr-3 h-11 rounded-md text-lg hover:bg-blue hover:text-white hover:border-blue">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -451,7 +451,7 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
                 </button>
               </li>
 
-              <li className="inline-block mr-3">
+              <li className="inline-block mr-3 vertical-align: middle">
                 <button className="bg-[#E6F4F7] hover:bg-blue-700 text-blue font-bold pl-3 pr-3 h-11 mb-2 rounded-md text-lg hover:bg-blue hover:text-white hover:border-blue">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
@@ -459,7 +459,7 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
                 Add To Compare
                 </button>
               </li>
-              <li className="inline-block mr-3">
+              <li className="inline-block mr-3 vertical-align: middle mt-2">
               <button className="bg-blue hover:bg-blue-700 text-white font-bold pr-3 pl-3 h-11 mb-2 rounded-md text-lg hover:bg-white hover:text-blue hover:border-blue">
               CheckOut
               </button>

@@ -57,7 +57,7 @@ export const CheckAvailabilityAction: React.FC = (props) => {
     <>
       <Button
         loading={loading}
-        className="w-full"
+        className="w-full bg-blue"
         onClick={handleVerifyCheckout}
         disabled={isEmpty}
         {...props}

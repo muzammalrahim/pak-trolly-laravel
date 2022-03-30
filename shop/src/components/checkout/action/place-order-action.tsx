@@ -127,7 +127,7 @@ export const PlaceOrderAction: React.FC = (props) => {
     <div className="px-6">
       <Button
         loading={placeOrderLoading}
-        className="w-full my-5"
+        className="w-full my-5 bg-blue"
         onClick={handlePlaceOrder}
         disabled={!isAllRequiredFieldSelected}
         {...props}
