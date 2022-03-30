@@ -41,13 +41,13 @@ const breakpoints = {
 		spaceBetween: 20,
 	},
 	"0": {
-		slidesPerView: 3,
+		slidesPerView: 2,
 		spaceBetween: 12,
 	},
 };
 
 const BrandBlock: React.FC<BrandProps> = ({
-	className = "mb-11 md:mb-11 lg:mb-12 xl:mb-14 lg:pb-1 xl:pb-0",
+	className = "lg:pb-1 xl:pb-0",
 	sectionHeading,
 }) => {
   const { t } = useTranslation();
@@ -63,7 +63,7 @@ const BrandBlock: React.FC<BrandProps> = ({
   const sliderBrand: Type[] = filterBrands(brands?.data, "slider-layout");
 
   return (
-	  <div className="bg-gray-300">
+	  <div className="bg-gray-300 pt-8">
 		  <Container>
 			<div className={className}>
 				{/* <SectionHeader sectionHeading={sectionHeading} /> */}

@@ -8,6 +8,7 @@ function withOpacity(variableName) {
   };
 }
 
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -46,7 +47,8 @@ module.exports = {
           600: "#3A3A3A",
           700: "#292929",
           800: "#707070",
-          900: "#3C3C3C"
+          900: "#3C3C3C",
+          120: "#969696"
         },
       },
       fontSize: {

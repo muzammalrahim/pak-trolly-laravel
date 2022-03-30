@@ -5,8 +5,14 @@ import { useUI } from "@contexts/ui.context";
 import usePrice from "@lib/use-price";
 import { Product } from "@framework/types";
 import { siteSettings } from "@settings/site.settings";
+import Ratings from "@components/common/ratings";
+
+// interface Props {
+// 	rating: any;
+// }
 
 interface ProductProps {
+  
   product: Product;
   className?: string;
   contactClassName?: string;
@@ -17,7 +23,7 @@ interface ProductProps {
   imgLoading?: "eager" | "lazy";
 }
 
-const ProductCard: FC<ProductProps> = ({
+const ProductHomeCard: FC<ProductProps> = ({
   product,
   className = "",
   contactClassName = "",
@@ -57,7 +63,7 @@ const ProductCard: FC<ProductProps> = ({
         {
           "ltr:pr-0 rtl:pl-0 pb-2 lg:pb-3 flex-row items-start bg-white transition duration-200 ease-in-out transform hover:-translate-y-1 hover:md:-translate-y-1.5 hover:shadow-product":
             variant === "grid",
-          "ltr:pr-0 rtl:pl-0 md:pb-1 flex-row items-start bg-white": variant === "gridSlim",
+          "ltr:pr-0 rtl:pl-0 md:pb-1 flex-col justify-center items-start bg-white": variant === "gridSlim",
           "items-center bg-transparent border border-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 hover:shadow-listProduct":
             variant === "listSmall",
           "flex-row items-center transition-transform ease-linear bg-gray-200 ltr:pr-2 ltr:lg:pr-3 ltr:2xl:pr-4 rtl:pl-2 rtl:lg:pl-3 rtl:2xl:pl-4":
@@ -84,12 +90,12 @@ const ProductCard: FC<ProductProps> = ({
         
         <Image
           src={image?.original ?? siteSettings?.product?.placeholderImage()}
-          width={imgWidth}
-          height={imgHeight}
+          width={268}
+          height={208}
           loading={imgLoading}
           quality={100}
           alt={name || "Product Image"}
-          className={cn("bg-gray-300 object-cover ltr:rounded-l-md rtl:rounded-r-md", {
+          className={cn(" object-cover ltr:rounded-l-md rtl:rounded-r-md", {
             "w-full rounded-md transition duration-200 ease-in group-hover:rounded-b-none":
               variant === "grid",
             "rounded-md transition duration-150 ease-linear transform group-hover:scale-105":
@@ -111,9 +117,9 @@ const ProductCard: FC<ProductProps> = ({
           contactClassName
         )}
       >
-        
+        <Ratings item={4}/>
         <h2
-          className={cn("text-heading font-semibold truncate mb-1", {
+          className={cn("text-gray-900 font-semibold truncate mb-1", {
             "text-sm md:text-base": variant === "grid",
             "md:mb-1.5 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg":
               variant === "gridSlim",
@@ -124,30 +130,33 @@ const ProductCard: FC<ProductProps> = ({
         >
           {name}
         </h2>
-        {description && (
+        
+        {/* {description && (
           <p className="text-body text-xs md:text-[13px] lg:text-sm leading-normal xl:leading-relaxed max-w-[250px] truncate">
             {description}
           </p>
-        )}
+        )} */}
         <div
-          className={`text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse ${
+          className={`text-blue font-semibold text-sm sm:text-base space-x-1 rtl:space-x-reverse ${
             variant === "grid"
-              ? "3xl:text-lg lg:mt-2.5"
-              : "sm:text-lg md:text-base 3xl:text-xl md:mt-2.5 2xl:mt-3"
+              ? "3xl:text-lg"
+              : "sm:text-lg md:text-base 3xl:text-xl"
           }`}
         >
           {product_type.toLocaleLowerCase() === "variable" ? (
             <>
-              <span className="inline-block">{minPrice}</span>
-              <span> - </span>
               <span className="inline-block">{maxPrice}</span>
+              <span> - </span>
+              <span className="inline-block">{minPrice}</span>
+              
+              
             </>
           ) : (
             <>
               <span className="inline-block">{price}</span>
 
               {basePrice && (
-                <del className="sm:text-base font-normal text-gray-800 ltr:pl-1 rtl:pr-1">
+                <del className="sm:text-base font-normal text-gray-120 ltr:pl-1 rtl:pr-1">
                   {basePrice}
                 </del>
               )}
@@ -159,4 +168,4 @@ const ProductCard: FC<ProductProps> = ({
   );
 };
 
-export default ProductCard;
+export default ProductHomeCard;

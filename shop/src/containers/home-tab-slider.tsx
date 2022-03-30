@@ -1,5 +1,5 @@
 import SectionHeader from "@components/common/section-header";
-import ProductCard from "@components/product/product-card";
+import ProductHomeCard from "@components/product/product-card-home-tab";
 import ProductCardGridLoader from "@components/ui/loaders/product-card-grid-loader";
 import Alert from "@components/ui/alert";
 import { useProductsQuery } from "@framework/products/products.query";
@@ -9,6 +9,7 @@ import { useTranslation } from "next-i18next";
 import isEmpty from "lodash/isEmpty";
 import NotFoundItem from "@components/404/not-found-item";
 import Carousel from "@components/ui/carousel/carousel";
+
 import { SwiperSlide } from "swiper/react";
 
 interface ProductsProps {
@@ -42,9 +43,9 @@ const breakpoints = {
   },
 };
 
-const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
-  sectionHeading = "Featured Product",
-  className = "mb-12 md:mb-14 xl:mb-16",
+const HomeTabSlaider: React.FC<ProductsProps> = ({
+  // sectionHeading = "Featured Product",
+  className = "mb-12 md:mb-14 xl:mb-16 ",
   variant = "default",
   limit = 10,
 }) => {
@@ -73,7 +74,7 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
       }`}
     >
       <div className="flex justify-between items-center flex-wrap mb-5 md:mb-6">
-        <SectionHeader sectionHeading={sectionHeading} className="mb-0" ></SectionHeader>
+        {/* <SectionHeader sectionHeading={sectionHeading} className="mb-0" ></SectionHeader> */}
       </div>
       {error ? (
         <Alert message={error?.message} />
@@ -96,7 +97,7 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
             <>
               {variant === "default" ? (
                 products?.data?.map((product: Product) => (
-                  <ProductCard
+                  <ProductHomeCard 
                     key={`product--key${product.id}`}
                     product={product}
                     imgWidth={324}
@@ -115,7 +116,7 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
                   {products?.data?.map((product: Product) => (
                     <SwiperSlide key={`product--key-${product.id}`}>
                       
-                      <ProductCard className="border"
+                      <ProductHomeCard className="border ht"
                       
                         key={`product--key${product.id}`}
                         product={product}
@@ -143,4 +144,4 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
   );
 };
 
-export default ProductsFlashSaleBlock;
+export default HomeTabSlaider;
