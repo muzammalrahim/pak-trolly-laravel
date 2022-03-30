@@ -11,10 +11,10 @@ const VerifiedItemList = dynamic(
 );
 
 export const RightSideView = () => {
-  const [verifiedResponse] = useAtom(verifiedResponseAtom);
-  if (isEmpty(verifiedResponse)) {
-    return <UnverifiedItemList />;
-  }
+  // const [verifiedResponse] = useAtom(verifiedResponseAtom);
+  // if (isEmpty(verifiedResponse)) {
+  //   return <UnverifiedItemList />;
+  // }
   return <VerifiedItemList className="border border-gray-300 rounded-md" />;
 };
 

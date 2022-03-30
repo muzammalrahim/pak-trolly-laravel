@@ -52,7 +52,7 @@ const PaymentGrid: React.FC<{ className?: string }> = ({ className }) => {
         />
       ) : null}
 
-      <RadioGroup value={gateway} onChange={setGateway}>
+      {/* <RadioGroup value={gateway} onChange={setGateway}>
         <RadioGroup.Label className="text-base text-heading font-semibold mb-5 block">
           {t("text-choose-payment")}
         </RadioGroup.Label>
@@ -66,28 +66,34 @@ const PaymentGrid: React.FC<{ className?: string }> = ({ className }) => {
                     className={cn(
                       "w-full h-full py-3 flex items-center justify-center border text-center rounded cursor-pointer relative",
                       checked
-                        ? "bg-white border-gray-600 shadow-600"
-                        : "bg-white border-gray-100"
+                        ? "bg-blue border-blue shadow-600"
+                        : "text-[#ffffff] border-gray-100"
                     )}
                   >
+                      <span className="text-xs text-heading font-semibold">
+                        {name}
+                      </span>
                     {icon ? (
                       <>
-                        {/* eslint-disable */}
+                        
                         <img src={icon} alt={name} className="h-[30px]" />
                       </>
                     ) : (
                       <span className="text-xs text-heading font-semibold">
                         {name}
                       </span>
-                    )}
+                    )} 
                   </div>
                 )}
               </RadioGroup.Option>
             )
           )}
         </div>
-      </RadioGroup>
-      <div>
+      </RadioGroup> */}
+       <span className="text-xs text-heading font-semibold pb-3">
+          Cash on Delivery (COD)
+        </span>
+      <div className="mt-3">
         <Component />
       </div>
     </div>
