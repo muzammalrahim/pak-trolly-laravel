@@ -32,6 +32,7 @@ yarn-error.log*
 .envForLive.txt
 .envForLive.ini
 server.js
+/pak-trolly-react/node_modules
 
 # vercel
 .vercel
