@@ -169,7 +169,7 @@ const SignUpForm: React.FC<Props> = ({ layout = "modal" }) => {
               type="submit"
               loading={isLoading}
               disabled={isLoading}
-              className="h-11 md:h-12 w-full mt-2"
+              className="h-11 md:h-12 w-full mt-2 bg-blue hover:border-blue hover:transition hover:bg-white hover:text-blue hover:border-2 rounded"
             >
               {t("common:text-register")}
             </Button>
@@ -197,7 +197,7 @@ const SignUpForm: React.FC<Props> = ({ layout = "modal" }) => {
         type="submit"
         loading={false}
         disabled={isLoading}
-        className="h-11 md:h-12 w-full mt-2.5 bg-google hover:bg-googleHover"
+        className="h-11 md:h-12 w-full mt-2.5 text-white rounded hover:bg-blue hover:text-white "
       >
         <ImGoogle2 className="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" />
         {t("common:text-login-with-google")}
@@ -206,7 +206,7 @@ const SignUpForm: React.FC<Props> = ({ layout = "modal" }) => {
         {t("common:text-have-account")}{" "}
         <button
           type="button"
-          className="text-sm sm:text-base text-heading underline font-bold hover:no-underline focus:no-underline focus:outline-none"
+          className="text-sm sm:text-base text-blue underline font-bold hover:no-underline focus:no-underline focus:outline-none"
           onClick={handleSignIn}
         >
           {t("common:text-login")}

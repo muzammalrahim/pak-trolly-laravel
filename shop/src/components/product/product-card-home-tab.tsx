@@ -1,3 +1,5 @@
+import {useState} from 'react'
+
 import cn from "classnames";
 import Image from "next/image";
 import type { FC } from "react";
@@ -33,6 +35,8 @@ const ProductHomeCard: FC<ProductProps> = ({
   imgHeight = 440,
   imgLoading,
 }) => {
+
+  const [isHover , setIsHover] = useState(false)
   const { openModal, setModalView, setModalData } = useUI();
   const { name, image, min_price, max_price, product_type, description } =
     product ?? {};
@@ -57,7 +61,7 @@ const ProductHomeCard: FC<ProductProps> = ({
   }
 
   return (
-    <div
+    <div onMouseLeave={()=>setIsHover(false)} onMouseEnter={()=>setIsHover(true)}
       className={cn(
         "group border-gray-50 box-border overflow-hidden flex rounded-md cursor-pointer",
         {
@@ -87,6 +91,35 @@ const ProductHomeCard: FC<ProductProps> = ({
           imageContentClassName
         )}
       >
+
+{/* hover icon */}
+
+
+        {/* {
+          isHover && 
+          <ul className="absoulte right-2 top-2">
+            <li className="block pb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+</svg>
+            </li>
+
+            <li className="block pb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M8 5a1 1 0 100 2h5.586l-1.293 1.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L13.586 5H8zM12 15a1 1 0 100-2H6.414l1.293-1.293a1 1 0 10-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L6.414 15H12z" />
+</svg>
+            </li>
+
+            <li className="block">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+  <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+</svg>
+            </li>
+
+            
+          </ul>
+        } */}
         
         <Image
           src={image?.original ?? siteSettings?.product?.placeholderImage()}
