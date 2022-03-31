@@ -410,7 +410,31 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
                     </Link>
                   ))}
                 </li>
+                
               )}
+               <li>
+              <span className="font-semibold text-heading inline-block ltr:pr-2 rtl:pl-2">
+                {t("text-brand-colon")}
+              </span>
+              <Link
+                href={`${ROUTES.BRAND}=${product?.type?.slug}`}
+                className="inline-block ltr:pr-1.5 rtl:pl-1.5 transition hover:underline hover:text-heading ltr:last:pr-0 rtl:last:pl-0"
+              >
+                {product?.type?.name}
+              </Link>
+            </li>
+
+            <li>
+              <span className="font-semibold text-heading inline-block ltr:pr-2 rtl:pl-2">
+                {t("text-shop-colon")}
+              </span>
+              <Link
+                href={`${ROUTES.SHOPS}/${product?.shop?.slug}`}
+                className="inline-block ltr:pr-1.5 rtl:pl-1.5 transition hover:underline hover:text-heading ltr:last:pr-0 rtl:last:pl-0"
+              >
+                {product?.shop?.name}
+              </Link>
+            </li>
 
             
           </ul>

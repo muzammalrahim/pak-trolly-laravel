@@ -5,6 +5,7 @@ import { useUI } from "@contexts/ui.context";
 import usePrice from "@lib/use-price";
 import { Product } from "@framework/types";
 import { siteSettings } from "@settings/site.settings";
+import StarIcon from "@components/icons/star-icon";
 
 interface ProductProps {
   product: Product;
@@ -100,9 +101,9 @@ const ProductCard: FC<ProductProps> = ({
         />
       </div>
       
-      <div
+      <div 
         className={cn(
-          "w-full overflow-hidden",
+          "w-full overflow-hidden ml-5",
           {
             "ltr:pl-0 rtl:pr-0 ltr:lg:pl-2.5 ltr:xl:pl-4 rtl:lg:pr-2.5 rtl:xl:pr-4 ltr:pr-2.5 ltr:xl:pr-4 rtl:pl-2.5 rtl:xl:pl-4": variant === "grid",
             "ltr:pl-0 rtl:pr-0": variant === "gridSlim",
@@ -138,9 +139,9 @@ const ProductCard: FC<ProductProps> = ({
         >
           {product_type.toLocaleLowerCase() === "variable" ? (
             <>
-              <span className="inline-block">{minPrice}</span>
-              <span> - </span>
-              <span className="inline-block">{maxPrice}</span>
+              <span className="inline-block line-through text-gray-500">{minPrice}</span>
+              {/* <span> - </span> */}
+              <span className="inline-block text-blue text-2xl font-semibold pl-3">{maxPrice}</span>
             </>
           ) : (
             <>
@@ -153,8 +154,19 @@ const ProductCard: FC<ProductProps> = ({
               )}
             </>
           )}
+
+
         </div>
+        <div className="inline-grid grid-cols-5 gap-1.5 mt-3 lg:mt-5">
+					{Array.from({ length: 4}).map((_, idx) => (
+						<StarIcon key={idx} />
+					))}
+					{Array.from({ length: 4 - 3}).map((_, idx) => (
+						<StarIcon color="#e6e6e6" key={idx} />
+					))}
+			</div>
       </div>
+      
     </div>
   );
 };
