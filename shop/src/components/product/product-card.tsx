@@ -1,13 +1,12 @@
 import React , {useState} from 'react'
-
 import cn from "classnames";
 import type { FC } from "react";
 import { useUI } from "@contexts/ui.context";
 import { siteSettings } from "@settings/site.settings";
 import StarIcon from "@components/icons/star-icon";
-import Count from "./count";
+// import Count from "./count";
 import Button from "@components/ui/button";
-import Counter from "@components/common/counter";
+// import Counter from '@components/common/counter';
 import { getVariations } from "@framework/utils/get-variations";
 import { useCart } from "@store/quick-cart/cart.context";
 import usePrice from "@lib/use-price";
@@ -26,6 +25,7 @@ import VariationPrice from "@components/product/product-variant-price";
 import { useTranslation } from "next-i18next";
 import isMatch from "lodash/isMatch";
 import { ROUTES } from "@lib/routes";
+// import CountDown from './countdown';
 
 
 
@@ -267,13 +267,15 @@ const ProductCard: FC<ProductProps> = ({
 						<StarIcon color="#e6e6e6" key={idx} />
 					))}
 			</div>
+{/* <CountDown /> */}
+
+
 
      <div className="">
-     <Count />
      <Button
                     onClick={addToCart}
                     variant="slim"
-                    className={`bg-blue hover:bg-blue-700 text-white mt-4 font-bold pl-3 pr-3 h-11 rounded-md ${
+                    className={`bg-blue hover:bg-blue-700 text-white mt-5 font-bold pl-3 pr-3 h-11 rounded-md ${
                       !isSelected && " hover:bg-blue hover:text-white hover:border-blue"
                     }`}
                     disabled={
