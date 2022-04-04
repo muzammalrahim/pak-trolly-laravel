@@ -34,6 +34,7 @@ export default function SignUpPage() {
           <SignUpForm layout="page" />
         </div>
         <Subscription />
+        
       </Container>
     </>
   );

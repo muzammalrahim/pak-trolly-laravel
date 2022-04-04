@@ -410,17 +410,41 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
                     </Link>
                   ))}
                 </li>
+                
               )}
+               <li>
+              <span className="font-semibold text-heading inline-block ltr:pr-2 rtl:pl-2">
+                {t("text-brand-colon")}
+              </span>
+              <Link
+                href={`${ROUTES.BRAND}=${product?.type?.slug}`}
+                className="inline-block ltr:pr-1.5 rtl:pl-1.5 transition hover:underline hover:text-heading ltr:last:pr-0 rtl:last:pl-0"
+              >
+                {product?.type?.name}
+              </Link>
+            </li>
+
+            <li>
+              <span className="font-semibold text-heading inline-block ltr:pr-2 rtl:pl-2">
+                {t("text-shop-colon")}
+              </span>
+              <Link
+                href={`${ROUTES.SHOPS}/${product?.shop?.slug}`}
+                className="inline-block ltr:pr-1.5 rtl:pl-1.5 transition hover:underline hover:text-heading ltr:last:pr-0 rtl:last:pl-0"
+              >
+                {product?.shop?.name}
+              </Link>
+            </li>
 
             
           </ul>
           <div className="pt-5">
             <ul>
-              <li className="inline-block mr-3 vertical-align: middle">
+              <li className="inline-block mr-3 align-middle">
                   <Button
                     onClick={addToCart}
                     variant="slim"
-                    className={`bg-[#E6F4F7] hover:bg-blue-700 text-blue font-bold pl-3 pr-3 h-11 rounded-md ${
+                    className={`bg-[#E6F4F7] hover:bg-blue-700 border-2 border-blue text-blue font-bold pl-3 pr-3 h-11 rounded-md ${
                       !isSelected && " hover:bg-blue hover:text-white hover:border-blue"
                     }`}
                     disabled={
@@ -442,7 +466,13 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
                   </Button>
               </li>
 
-              <li className="inline-block mr-3 vertical-align: middle">
+              <li className="inline-block mr-3 align-middle mt-2">
+              <button className="bg-blue hover:bg-blue-700 text-white font-bold pr-3 pl-3 h-11 mb-2 rounded-md text-lg hover:bg-white hover:text-blue hover:border-blue">
+              CheckOut
+              </button>
+              </li>
+
+              {/* <li className="inline-block mr-3 vertical-align: middle">
                 <button className="bg-[#E6F4F7] hover:bg-blue-700 text-blue font-bold mb-2 pl-3 pr-3 h-11 rounded-md text-lg hover:bg-blue hover:text-white hover:border-blue">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -458,12 +488,8 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
                 </svg>
                 Add To Compare
                 </button>
-              </li>
-              <li className="inline-block mr-3 vertical-align: middle mt-2">
-              <button className="bg-blue hover:bg-blue-700 text-white font-bold pr-3 pl-3 h-11 mb-2 rounded-md text-lg hover:bg-white hover:text-blue hover:border-blue">
-              CheckOut
-              </button>
-              </li>
+              </li> */}
+              
             </ul>
           </div>
     </div>
