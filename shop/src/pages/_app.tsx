@@ -13,6 +13,7 @@ import { ToastContainer } from "react-toastify";
 import { appWithTranslation } from "next-i18next";
 import DefaultSeo from "@components/common/default-seo";
 
+
 // Load Open Sans and satisfy typeface font
 import "@fontsource/open-sans";
 import "@fontsource/open-sans/600.css";
@@ -33,6 +34,7 @@ import { useSettingsQuery } from "@framework/settings/settings.query";
 import type { NextPage } from "next";
 import PrivateRoute from "@lib/private-route";
 import SocialLoginProvider from "../providers/social-login-provider";
+
 
 function handleExitComplete() {
   if (typeof window !== "undefined") {

@@ -19,12 +19,12 @@ const Footer: React.FC = () => (
         <div className="w-ful md:w-1/4 ">
           <div className="">
             <h3 className="text-white text-sm md:text-base xl:text-lg font-semibold mb-2 2xl:mb-6 3xl:mb-7">
-              About
+              About Information
             </h3>
             <div>
-              <p className="text-white transition-colors duration-200 hover:text-black">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard.
+              <p className="text-white transition-colors">
+                We are with 5 years of experiance along with Excellelent
+                Customer Rating & with huge high quality electronice collection.
               </p>
             </div>
           </div>
@@ -35,27 +35,27 @@ const Footer: React.FC = () => (
               Product
             </h3>
           <ul>
-            <li className="text-white transition-colors duration-200 hover:text-black">
+            <li className="text-white transition-colors duration-200 hover:text-blue">
               <Link href="">
                   <a>Shipping & Delivery</a>
               </Link>
             </li>
-            <li className="text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="text-white transition-colors duration-200 mt-3 hover:text-blue">
               <Link href="">
                   <a>All Products</a>
               </Link>
             </li>
-            <li className="text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="text-white transition-colors duration-200 mt-3 hover:text-blue">
               <Link href="">
                   <a>Return & Exchanges</a>
               </Link>
             </li>
-            <li className="text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="text-white transition-colors duration-200 mt-3 hover:text-blue">
               <Link href="">
                   <a>FAQ & Helps</a>
               </Link>
             </li>
-            <li className="text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="text-white transition-colors duration-200 mt-3 hover:text-blue">
               <Link href="">
                   <a>Deals</a>
               </Link>
@@ -70,27 +70,27 @@ const Footer: React.FC = () => (
              Company
           </h3>
           <ul className="">
-            <li className="text-white transition-colors duration-200 hover:text-black">
+            <li className="text-white transition-colors duration-200 hover:text-blue">
               <Link href="">
                   <a>About Us</a>
               </Link>
             </li>
-            <li className="text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="text-white transition-colors duration-200 mt-3 hover:text-blue">
               <Link href="">
                   <a>Customer Support</a>
               </Link>
             </li>
-            <li className="text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="text-white transition-colors duration-200 mt-3 hover:text-blue">
               <Link href="">
                   <a>Support Center</a>
               </Link>
             </li>
-            <li className="text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="text-white transition-colors duration-200 mt-3 hover:text-blue">
               <Link href="">
                   <a>Terms & conditions</a>
               </Link>
             </li>
-            <li className="text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="text-white transition-colors duration-200 mt-3 hover:text-blue">
               <Link href="">
                   <a>Copyright</a>
               </Link>
@@ -104,7 +104,7 @@ const Footer: React.FC = () => (
             Contact Information
           </h3>
           <ul className="">
-            <li className="flex flex-row items-start text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="flex flex-row items-start text-white">
               <div className="relative top-1">
                 <Image
                   src={User}
@@ -115,7 +115,7 @@ const Footer: React.FC = () => (
               </div>
             
               <p className="pl-5">
-                Lorem Ipsum is simply dummy text of the printing and 
+                House#21, Street#5, G 13/3, Islamabad.
               </p>
             </li>
             <li className="flex flex-row items-start text-white transition-colors duration-200 mt-3 hover:text-black">
@@ -125,11 +125,11 @@ const Footer: React.FC = () => (
                 width="20px"
                 height="20px"
               />
-              <Link href="call-to:+21 123 12547 254">
-                  <a className="pl-5">+21 123 12547 254</a>
+              <Link href="call-to:+ 051 123 123 2">
+                  <a className="pl-5 transition-colors duration-200 hover:text-blue">+ 051 123 123 2</a>
               </Link>
             </li>
-            <li className="text-white transition-colors duration-200 mt-3 hover:text-black">
+            <li className="text-white transition-colors duration-200 mt-3 hover:text-blue">
             <Image
                 src={Mail}
                 alt="Picture of the author"
@@ -137,7 +137,7 @@ const Footer: React.FC = () => (
                 height="15px"
               />
               <Link href="">
-                  <a className="pl-5">domain@example.com</a>
+                  <a className="pl-5 transition-colors duration-200 mt-3 hover:text-blue">paktrolly@support.com</a>
               </Link>
             </li>
             

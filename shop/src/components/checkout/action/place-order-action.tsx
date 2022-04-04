@@ -61,16 +61,16 @@ export const PlaceOrderAction: React.FC = (props) => {
     Number(discount)
   );
   const handlePlaceOrder = () => {
-    if (!customer_contact) {
-      setErrorMessage(t("common:contact-number-required"));
+    if (customer_contact) {
+      // setErrorMessage(t("common:contact-number-required"));
       return;
     }
-    if (!payment_gateway) {
-      setErrorMessage(t("common:text-gateway-required"));
+    if (payment_gateway) {
+      // setErrorMessage(t("common:text-gateway-required"));
       return;
     }
     if (payment_gateway === "STRIPE" && !token) {
-      setErrorMessage(t("common:text-pay-first"));
+      // setErrorMessage(t("common:text-pay-first"));
       return;
     }
     let input = {
@@ -129,7 +129,7 @@ export const PlaceOrderAction: React.FC = (props) => {
         loading={placeOrderLoading}
         className="w-full my-5 bg-blue"
         onClick={handlePlaceOrder}
-        disabled={!isAllRequiredFieldSelected}
+        disabled={isAllRequiredFieldSelected}
         {...props}
       />
       {errorMessage && (

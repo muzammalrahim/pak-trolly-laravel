@@ -24,7 +24,7 @@ const HeaderMenu: React.FC<MenuProps> = ({ data, className }) => {
 				>
 					<Link
 						href={item.path}
-						className="inline-flex items-center text-sm xl:text-base text-heading px-3 xl:px-4 py-2 font-normal relative group-hover:text-black"
+						className="inline-flex items-center text-sm xl:text-base text-heading px-3 xl:px-4 py-2 font-normal relative group-hover:text-blue"
 					>
 						{t(item.label)}
 						{(item?.columns || item.subMenu) && (
