@@ -53,12 +53,12 @@ function ProductTab() {
 
 
 	<div className="border-b-3 border-b-[#e6e6e6] pb-4 mb-6">
-		<button  className={`text-black  text-xl  w-36 mr-5 pb-2 ${isActive == 1 && "border-b-blue text-blue font-bold border-b-4"}` } onClick={()=>{
+		<button  className={`text-black  text-xl sm:w-32 sm:text-lg  w-40 mr-5 pb-2 ${isActive == 1 && "border-b-blue text-blue font-bold border-b-4"}` } onClick={()=>{
 					setTabs(1)
 					setIsActive(1)
 					}}>Description</button>
-		<button  className={`text-black w-36 text-xl mr-5 pb-2  ${isActive == 2 && "border-b-blue font-bold text-blue border-b-4"}`} onClick={()=>{setTabs(2);setIsActive(2)}}>Product Details</button>
-		<button  className={`text-black w-36 text-xl mr-5 pb-2  ${isActive == 3 && "border-b-blue text-blue font-bold border-b-4"}`} onClick={()=>{setTabs(3);setIsActive(3)}}>Attachments</button>
+		<button  className={`text-black w-40 text-xl mr-5 pb-2 sm:w-32 sm:text-lg   ${isActive == 2 && "border-b-blue font-bold text-blue border-b-4"}`} onClick={()=>{setTabs(2);setIsActive(2)}}>Product Details</button>
+		<button  className={`text-black w-40 text-xl mr-5 pb-2 sm:w-32 sm:text-lg   ${isActive == 3 && "border-b-blue text-blue font-bold border-b-4"}`} onClick={()=>{setTabs(3);setIsActive(3)}}>Attachments</button>
 	</div>
 
 	{

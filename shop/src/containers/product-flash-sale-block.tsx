@@ -123,13 +123,6 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
                         imgHeight={138}
                         variant="gridSlim"
                       />
-                      {/* <ProductCard className="mt-5"
-                        key={`product--key${product.id}`}
-                        product={product}
-                        imgWidth={103}
-                        imgHeight={138}
-                        variant="gridSlim"
-                      /> */}
                     </SwiperSlide>
                     
                   ))}
