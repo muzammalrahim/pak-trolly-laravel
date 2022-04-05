@@ -19,6 +19,7 @@ import VariationPrice from "@components/product/product-variant-price";
 import { useTranslation } from "next-i18next";
 import isMatch from "lodash/isMatch";
 import { ROUTES } from "@lib/routes";
+// import Counter from '../product/Counter/Counter'
 
 // interface Props {
 // 	item: any;
@@ -438,6 +439,10 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
 
             
           </ul>
+
+                      {/* <Counter/> */}
+
+
           <div className="pt-5">
             <ul>
               <li className="inline-block mr-3 align-middle">

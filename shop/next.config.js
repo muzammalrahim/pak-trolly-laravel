@@ -24,7 +24,8 @@ module.exports = withPWA({
       "picsum.photos",
       "cdninstagram.com",
       "scontent.cdninstagram.com",
-      "api.buyfresh.gq"
+        "api.buyfresh.gq"
+
     ],
   },
 
