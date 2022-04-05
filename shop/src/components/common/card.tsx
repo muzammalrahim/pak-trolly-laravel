@@ -1,7 +1,7 @@
 import Link from "@components/ui/link";
 import Image from "next/image";
 import Text from "@components/ui/text";
-import { FaLink } from "@react-icons/all-files/fa/FaLink";
+// import { FaLink } from "@react-icons/all-files/fa/FaLink";
 import { LinkProps } from "next/link";
 import { useTranslation } from "next-i18next";
 import React from "react";
@@ -25,7 +25,7 @@ const Card: React.FC<Props> = ({
 	effectActive = false,
 	effectPosition = "imageOnly",
 	href,
-  image
+  	image
 }) => {
 	const { name, products_count } = item ?? {};
 	const imageSize:any = (variant === "circle" && 180) || (variant === "rounded" && 198) || (variant === "modern" && 99) || (variant === "elegant" && 48);
@@ -75,13 +75,13 @@ const Card: React.FC<Props> = ({
 								(["rounded", "modern", "elegant"].includes(variant) && "rounded-md") || (variant === "circle" && "rounded-full")
 							}`}
 						/>
-						<div className="absolute top-0 left-0 h-full w-full flex items-center justify-center">
+						{/* <div className="absolute top-0 left-0 h-full w-full flex items-center justify-center">
 							<FaLink className="text-white text-base sm:text-xl lg:text-2xl xl:text-3xl transform opacity-0 scale-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-100" />
-						</div>
+						</div> */}
 					</>
 				)}
 			</div>
-			{variant === "modern" ? 
+			{/* {variant === "modern" ? 
 				<Text variant="heading" className="text-heading text-sm md:text-base xl:text-lg font-semibold capitalize absolute text-center bottom-4 sm:bottom-5 md:bottom-6 xl:bottom-8 inset-x-0 z-10">
 					{name}
 				</Text>
@@ -98,7 +98,7 @@ const Card: React.FC<Props> = ({
 				</Text>
 				:
 				""
-			}
+			} */}
 			{(effectActive === true && effectPosition === "fullBody") && (
 				<>
 					<div

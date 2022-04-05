@@ -64,6 +64,7 @@
 		content: "";
 		height: 3px;
 		transition: all 0.3s ease-in-out 0s;
+		background: #129cb8 !important
 	}
 	.megaMenu,
 	.subMenu {
