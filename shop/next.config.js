@@ -25,6 +25,7 @@ module.exports = withPWA({
       "cdninstagram.com",
       "scontent.cdninstagram.com",
         "api.buyfresh.gq"
+
     ],
   },
 
