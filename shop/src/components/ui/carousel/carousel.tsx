@@ -68,6 +68,7 @@ const Carousel: React.FunctionComponent<CarouselPropsType> = ({
 			>
 				{children}
 			</Swiper>
+			
 			<div className="flex items-center w-full absolute top-2/4 z-10">
 				<button
 					ref={prevRef}

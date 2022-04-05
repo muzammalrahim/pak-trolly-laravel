@@ -27,5 +27,9 @@
     "*.{js,ts,tsx,md,css}": [
       "prettier --trailing-comma es5 --write"
     ]
+  },
+  "dependencies": {
+    "react-countdown": "^2.3.2",
+    "tw-elements": "^1.0.0-alpha12"
   }
 }

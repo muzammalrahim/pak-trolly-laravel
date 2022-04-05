@@ -178,7 +178,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
               <button
                 type="button"
                 onClick={handleForgetPassword}
-                className="ltr:text-right rtl:text-left text-sm text-heading ltr:pl-3 rtl:pr-3 underline hover:no-underline focus:no-underline focus:outline-none"
+                className="ltr:text-right rtl:text-left text-sm text-blue ltr:pl-3 rtl:pr-3 underline hover:no-underline focus:no-underline focus:outline-none"
               >
                 {t("common:text-forgot-password")}
               </button>
@@ -189,7 +189,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
               type="submit"
               loading={loading}
               disabled={loading}
-              className="h-11 md:h-12 w-full mt-1.5"
+              className="h-11 md:h-12 w-full mt-1.5 bg-blue hover:border-blue hover:transition hover:bg-white hover:text-blue hover:border-2 rounded"
             >
               {t("common:text-login")}
             </Button>
@@ -207,7 +207,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
         <Button
           loading={false}
           disabled={false}
-          className="h-11 md:h-12 w-full mt-2.5 bg-google hover:bg-googleHover"
+          className="h-11 md:h-12 w-full mt-2.5 text-white rounded bg-white border-2 border-blue transition hover:text-white hover:bg-blue"
           onClick={() => signIn("google")}
         >
           <ImGoogle2 className="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" />
@@ -228,7 +228,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
         {t("common:text-no-account")}{" "}
         <button
           type="button"
-          className="text-sm sm:text-base text-heading underline font-bold hover:no-underline focus:no-underline focus:outline-none"
+          className="text-sm sm:text-base text-blue underline font-bold hover:no-underline focus:no-underline focus:outline-none"
           onClick={handleSignUp}
         >
           {t("common:text-register")}

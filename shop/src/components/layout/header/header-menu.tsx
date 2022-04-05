@@ -24,7 +24,7 @@ const HeaderMenu: React.FC<MenuProps> = ({ data, className }) => {
 				>
 					<Link
 						href={item.path}
-						className="inline-flex items-center text-sm xl:text-base text-heading px-3 xl:px-4 py-2 font-normal relative group-hover:text-black"
+						className="inline-flex items-center text-sm xl:text-base text-heading px-3 xl:px-4 py-2 font-normal relative group-hover:text-blue"
 					>
 						{t(item.label)}
 						{(item?.columns || item.subMenu) && (
@@ -40,7 +40,7 @@ const HeaderMenu: React.FC<MenuProps> = ({ data, className }) => {
 
 					{item?.subMenu && Array.isArray(item.subMenu) && (
 						<div className="subMenu shadow-header bg-gray-200 absolute ltr:left-0 rtl:right-0 opacity-0 group-hover:opacity-100">
-							<ul className="text-body text-sm py-5">
+							{/* <ul className="text-body text-sm py-5">
 								{item.subMenu.map((menu: any, index: number) => {
 									const dept: number = 1;
 									const menuName: string = `sidebar-menu-${dept}-${index}`;
@@ -56,7 +56,7 @@ const HeaderMenu: React.FC<MenuProps> = ({ data, className }) => {
 										/>
 									);
 								})}
-							</ul>
+							</ul> */}
 						</div>
 					)}
 				</div>

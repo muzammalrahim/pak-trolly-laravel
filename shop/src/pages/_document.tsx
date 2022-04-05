@@ -7,6 +7,8 @@ import Document, {
 } from "next/document";
 import { getDirection } from "@utils/get-direction";
 
+
+
 export default class CustomDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
 		return await Document.getInitialProps(ctx);
@@ -15,7 +17,10 @@ export default class CustomDocument extends Document {
 		const { locale } = this.props.__NEXT_DATA__;
 		return (
       <Html dir={getDirection(locale)}>
-        <Head />
+        <Head >
+			{/* <title>Pak Trolly</title>	 */}
+			
+		</Head>
         <body>
         <Main />
         <NextScript />
