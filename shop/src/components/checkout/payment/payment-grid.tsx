@@ -52,7 +52,7 @@ const PaymentGrid: React.FC<{ className?: string }> = ({ className }) => {
         />
       ) : null}
 
-      {/* <RadioGroup value={gateway} onChange={setGateway}>
+      <RadioGroup value={gateway} onChange={setGateway}>
         <RadioGroup.Label className="text-base text-heading font-semibold mb-5 block">
           {t("text-choose-payment")}
         </RadioGroup.Label>
@@ -70,9 +70,9 @@ const PaymentGrid: React.FC<{ className?: string }> = ({ className }) => {
                         : "text-[#ffffff] border-gray-100"
                     )}
                   >
-                      <span className="text-xs text-heading font-semibold">
+                      {/* <span className="text-xs text-heading font-semibold">
                         {name}
-                      </span>
+                      </span> */}
                     {icon ? (
                       <>
                         
@@ -89,10 +89,10 @@ const PaymentGrid: React.FC<{ className?: string }> = ({ className }) => {
             )
           )}
         </div>
-      </RadioGroup> */}
-       <span className="text-xs text-heading font-semibold pb-3">
+      </RadioGroup>
+       {/* <span className="text-xs text-heading font-semibold pb-3">
           Cash on Delivery (COD)
-        </span>
+        </span> */}
       <div className="mt-3">
         <Component />
       </div>
