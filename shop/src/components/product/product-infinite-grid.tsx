@@ -1,4 +1,4 @@
-import ProductCard from "@components/product/product-card";
+import ProductCardCategory from "@components/product/product-card-category";
 import Button from "@components/ui/button";
 import type { FC } from "react";
 import { PaginatedProduct } from "@framework/products/products.query";
@@ -35,17 +35,18 @@ export const ProductInfiniteGrid: FC<ProductGridProps> = ({
   return (
     <>
       <div
-        className={`grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-3 lg:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8 ${className}`}
+        className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-x-3 lg:gap-x-5 xl:gap-x-7 gap-y-3 xl:gap-y-5 2xl:gap-y-8 ${className}`}
       >
         {loading && !data?.pages?.length ? (
           <ProductFeedLoader limit={20} uniqueKey="search-product" />
         ) : (
           data?.pages?.map((page: PaginatedProduct) => {
             return page?.data?.map((product: Product) => (
-              <ProductCard
+              <ProductCardCategory
                 key={`product--key${product.id}`}
                 product={product}
                 variant="grid"
+                className="CP"
               />
             ));
           })

@@ -52,14 +52,14 @@ const productGalleryCarouselResponsive = {
 type Props = {
   product: Product;
 };
-const ProductCard: FC<ProductProps> = ({
+const ProductCardCategory: FC<ProductProps> = ({
   product,
   className = "",
   contactClassName = "",
   imageContentClassName = "",
   variant = "list",
-  imgWidth = 340,
-  imgHeight = 440,
+  imgWidth = 270,
+  imgHeight = 200,
   imgLoading,
 }) => {
   const { t } = useTranslation();
@@ -93,7 +93,7 @@ const ProductCard: FC<ProductProps> = ({
     );
   }
 
-  function addToCart() {
+  function addToTrolly() {
     if (!isSelected) return;
     // to show btn feedback while product carting
     setAddToCartLoader(true);
@@ -155,7 +155,7 @@ const ProductCard: FC<ProductProps> = ({
   return (
     <div
       className={cn(
-        "group border-gray-50 box-border overflow-hidden flex rounded-md cursor-pointer ",
+        "group border-gray-50 box-border overflow-hidden rounded-md cursor-pointer mt-6",
         {
           "ltr:pr-0 rtl:pl-0 pb-2 lg:pb-3 flex-row items-start bg-white transition duration-200 ease-in-out transform hover:-translate-y-1 hover:md:-translate-y-1.5 hover:shadow-product":
             variant === "grid",
@@ -273,7 +273,7 @@ const ProductCard: FC<ProductProps> = ({
 
      <div className="">
      <Button
-                    onClick={addToCart}
+                    onClick={addToTrolly}
                     variant="slim"
                     className={`bg-blue hover:bg-blue-700 text-white mt-5 font-bold pl-3 pr-3 h-11 rounded-md ${
                       !isSelected && " hover:bg-blue hover:text-white hover:border-blue"
@@ -302,4 +302,4 @@ const ProductCard: FC<ProductProps> = ({
   );
 };
 
-export default ProductCard;
+export default ProductCardCategory;

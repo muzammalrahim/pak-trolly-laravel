@@ -20,8 +20,9 @@ export default function Category() {
             categorySlug={query?.slug as string}
           />
         </div>
-        <Subscription />
+        
       </Container>
+      <Subscription />
     </div>
   );
 }
