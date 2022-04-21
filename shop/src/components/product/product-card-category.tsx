@@ -227,11 +227,11 @@ const ProductCardCategory: FC<ProductProps> = ({
         >
           {name}
         </h2>
-        {description && (
+        {/* {description && (
           <p className="text-body text-xs md:text-[13px] lg:text-sm leading-normal xl:leading-relaxed max-w-[250px] truncate">
             {description}
           </p>
-        )}
+        )} */}
         <div
           className={`text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse ${
             variant === "grid"
