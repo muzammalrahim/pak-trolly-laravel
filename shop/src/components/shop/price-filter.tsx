@@ -5,42 +5,42 @@ import { useTranslation } from "next-i18next";
 const priceFilterItems = [
 	{
 		id: "1",
-		name: "Under $50",
+		name: "Under PKR50",
 		slug: "0-50",
 	},
 	{
 		id: "2",
-		name: "$50 to $100",
+		name: "PKR50 to PKR100",
 		slug: "50-100",
 	},
 	{
 		id: "3",
-		name: "$100 to $150",
+		name: "PKR100 to PKR150",
 		slug: "100-150",
 	},
 	{
 		id: "4",
-		name: "$150 to $200",
+		name: "PKR150 to PKR200",
 		slug: "150-200",
 	},
 	{
 		id: "5",
-		name: "$200 to $300",
+		name: "PKR200 to PKR300",
 		slug: "200-300",
 	},
 	{
 		id: "6",
-		name: "$300 to $500",
+		name: "PKR300 to PKR500",
 		slug: "300-500",
 	},
 	{
 		id: "7",
-		name: "$500 to $1000",
+		name: "PKR500 to PKR1000",
 		slug: "500-1000",
 	},
 	{
 		id: "8",
-		name: "Over $1000",
+		name: "Over PKR1000",
 		slug: "1000+",
 	},
 ];
