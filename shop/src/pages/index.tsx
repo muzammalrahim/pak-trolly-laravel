@@ -42,7 +42,8 @@ export default function Home() {
 
   return (
     <>
-      <HeroBlock data={heroBanner} />
+    <Container>
+    <HeroBlock data={heroBanner} />
       <Container>
         {/* <FlashSaleBlock /> */}
         <BannerCarouselBlock banners={promotionalBanner} />
@@ -102,6 +103,8 @@ export default function Home() {
         {/* <DownloadApps className="bg-linen" /> */}
         {/* <Support /> */}
         
+    </Container>
+     
       
       
     </>

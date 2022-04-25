@@ -54,7 +54,7 @@ const Header: React.FC<Props> = ({
 
 		
 
-	<div className="lg:col-span-3 md:col-span-4 col-sm-12 m-auto lg:m-0 md:m-0 block">
+	<div className="lg:col-span-2 md:col-span-3 col-sm-12 m-auto lg:m-0 md:m-0 block">
 	<button
 		aria-label="Menu"
 		className={`menuBtn md:flex ${variant !== "modern" ? "hidden lg:hidden px-5 2xl:px-7" : "ltr:pr-7 rtl:pl-2 hidden md:block"} flex-col items-center justify-center flex-shrink-0 h-full outline-none focus:outline-none`}
@@ -68,11 +68,11 @@ const Header: React.FC<Props> = ({
 	</button>
 	<Logo />
 	</div>
-	<div className="hidden md:block lg:col-span-7 md:col-span-5  relative">
+	<div className="hidden md:block lg:col-span-6 md:col-span-5 lg:mt-3.5  relative">
 	<input className="hadow appearance-none border-blue border rounded w-full py-2 px-3 text-gray-700 leading-tight h-11 focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Search Here......." />
 	<SearchIcon className="absolute top-3 right-3" />
 	</div>
-	<div className="lg:col-span-1 md:col-span-1 hidden md:block pt-3 text-right justify-center">
+	<div className="lg:col-span-2 md:col-span-2 hidden md:block pt-3 text-right justify-center">
 
 		<AuthMenu
 			isAuthorized={isAuthorize}
@@ -88,7 +88,7 @@ const Header: React.FC<Props> = ({
 			{t("text-page-my-account")}
 		</AuthMenu>
 		</div>
-	<div className="lg:col-span-1 pt-3 md:col-span-1 hidden md:block justify-center text-right lg:pl-10 md:pl-7">
+	<div className="lg:col-span-2 pt-3 md:col-span-2 hidden md:block justify-center text-right lg:pl-10 md:pl-7">
 	<CartButton />
 	</div>
 	
