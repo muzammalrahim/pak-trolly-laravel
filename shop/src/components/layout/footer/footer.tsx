@@ -115,7 +115,7 @@ const Footer: React.FC = () => (
               </div>
             
               <p className="pl-5">
-                House#21, Street#5, G 13/3, Islamabad.
+                Lorem Ipsum Sit Amet, Dummy place.
               </p>
             </li>
             <li className="flex flex-row items-start text-white transition-colors duration-200 mt-3 hover:text-black">
