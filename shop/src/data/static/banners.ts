@@ -332,7 +332,7 @@ export const standardDemoHeroBanner = [
       desktop: {
         url: "/assets/images/hero/banner-1.jpg",
         width: 1800,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -349,7 +349,7 @@ export const standardDemoHeroBanner = [
       desktop: {
         url: "/assets/images/hero/banner-2.jpg",
         width: 1800,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -366,7 +366,7 @@ export const standardDemoHeroBanner = [
       desktop: {
         url: "/assets/images/hero/banner-3.jpg",
         width: 1800,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -459,7 +459,7 @@ export const minimalDemoHeroBanner = [
       desktop: {
         url: "/assets/images/hero/two/banner-1.jpg",
         width: 1450,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -476,7 +476,7 @@ export const minimalDemoHeroBanner = [
       desktop: {
         url: "/assets/images/hero/two/banner-2.jpg",
         width: 1450,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -493,7 +493,7 @@ export const minimalDemoHeroBanner = [
       desktop: {
         url: "/assets/images/hero/two/banner-3.jpg",
         width: 1450,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -832,7 +832,7 @@ export const trendyDemoHeroBanner = [
       desktop: {
         url: "/assets/images/banner/trendy/desktop/banner-1.jpg",
         width: 1800,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -849,7 +849,7 @@ export const trendyDemoHeroBanner = [
       desktop: {
         url: "/assets/images/banner/trendy/desktop/banner-2.jpg",
         width: 1800,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -866,7 +866,7 @@ export const trendyDemoHeroBanner = [
       desktop: {
         url: "/assets/images/banner/trendy/desktop/banner-3.jpg",
         width: 1800,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -923,7 +923,7 @@ export const homeTrendyCoupons = [
       desktop: {
         url: "/assets/images/banner/banner-7.jpg",
         width: 1800,
-        height: 800,
+        height: 500,
       },
     },
   }
@@ -943,7 +943,7 @@ export const homeTrendyProductWithBanner = [
       desktop: {
         url: "/assets/images/banner/banner-sale-offer-half.jpg",
         width: 1800,
-        height: 800,
+        height: 500,
       },
     },
   },
@@ -960,7 +960,7 @@ export const homeTrendyProductWithBanner = [
       desktop: {
         url: "/assets/images/banner/banner-sale-offer-half.jpg",
         width: 1800,
-        height: 800,
+        height: 500,
       },
     },
   }
@@ -1109,7 +1109,7 @@ export const homeRefinedHeroBanner = [
 			desktop: {
 				url: "/assets/images/hero/two/banner-4.jpg",
 				width: 1450,
-				height: 800,
+				height: 500,
 			},
 		},
 	},
@@ -1126,7 +1126,7 @@ export const homeRefinedHeroBanner = [
 			desktop: {
 				url: "/assets/images/hero/two/banner-2.jpg",
 				width: 1450,
-				height: 800,
+				height: 500,
 			},
 		},
 	},
@@ -1143,7 +1143,7 @@ export const homeRefinedHeroBanner = [
 			desktop: {
 				url: "/assets/images/hero/two/banner-3.jpg",
 				width: 1450,
-				height: 800,
+				height: 500,
 			},
 		},
 	},

@@ -35,6 +35,7 @@ module.exports = {
         googleHover: "#307bf9",
         success: "#23B848",
         blue: "#129CB8",
+        red: '#990000',
         gray: {
           50: "#FBFBFB",
           100: "#F1F1F1",
