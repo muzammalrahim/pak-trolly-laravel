@@ -101,11 +101,11 @@ export const siteSettings = {
         label: "sidebar-nav-item-shippings",
         icon: "ShippingsIcon",
       },
-      {
-        href: ROUTES.WITHDRAWS,
-        label: "sidebar-nav-item-withdraws",
-        icon: "WithdrawIcon",
-      },
+      // {
+      //   href: ROUTES.WITHDRAWS,
+      //   label: "sidebar-nav-item-withdraws",
+      //   icon: "WithdrawIcon",
+      // },
       {
         href: ROUTES.SETTINGS,
         label: "sidebar-nav-item-settings",
