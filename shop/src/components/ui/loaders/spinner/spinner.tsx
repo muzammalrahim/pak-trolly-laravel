@@ -30,7 +30,7 @@ const Spinner = (props: Props) => {
           <div className={styles.loading} />
 
           {showText && (
-            <h3 className="text-lg font-semibold text-body italic">{text}</h3>
+            <h3 className="text-lg font-semibold text-blue italic">{text}</h3>
           )}
         </div>
       )}
