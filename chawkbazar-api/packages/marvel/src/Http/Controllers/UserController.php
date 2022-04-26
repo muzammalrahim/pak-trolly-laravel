@@ -127,6 +127,10 @@ class UserController extends CoreController
         if (!$user || !Hash::check($request->password, $user->password)) {
             return ["token" => null, "permissions" => []];
         }
+
+        // $authentication_code = $user->generateCode($user);
+        // dd($authentication_code);
+
         return ["token" => $user->createToken('auth_token')->plainTextToken, "permissions" => $user->getPermissionNames()];
     }
 

@@ -12,7 +12,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-
+use Exception;
+use Twilio\Rest\Client;
 
 class User extends Authenticatable
 {
@@ -58,6 +59,39 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function generateCode($user)
+    {
+        $code = rand(1000, 9999);
+  
+        \App\Models\UserCode::updateOrCreate(
+            [ 'user_id' => $user->id ],
+            [ 'code' => $code ]
+        );
+  
+        $receiverNumber = '+923127761626';
+        $message = "2FA login code is ". $code;
+
+        // dd($message);
+    
+        try {
+   
+            $account_sid = getenv("TWILIO_SID");
+            $auth_token = getenv("TWILIO_TOKEN");
+            $twilio_number = getenv("TWILIO_FROM");
+    
+            $client = new Client($account_sid, $auth_token);
+            $client->messages->create($receiverNumber, [
+                'from' => $twilio_number, 
+                'body' => $message]);
+
+    
+        } catch (Exception $e) {
+            dd($e->getMessage());
+            info("Error: ". $e->getMessage());
+        }
+    }
 
 
     /**
