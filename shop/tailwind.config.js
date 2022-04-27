@@ -54,6 +54,8 @@ module.exports = {
       },
       fontSize: {
         "10px": ".625rem",
+        "text-14": "14px",
+        "text-12": "12px",
       },
       screens: {
         sm: "480px",

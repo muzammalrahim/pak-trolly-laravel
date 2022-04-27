@@ -1,4 +1,3 @@
-
 import Button from "@components/ui/button";
 import {
   useOtpLoginMutation,
@@ -47,7 +46,7 @@ const otpLoginFormSchema = yup.object().shape({
     .min(6, "forms:error-min-code"),
 });
 
-export const TwoFactorLogin: React.FC<OTPProps> = ({ onLoginSuccess }) => {
+export const OTPLoginForm: React.FC<OTPProps> = ({ onLoginSuccess }) => {
   const { t } = useTranslation("common");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [hasOTP, setHasOTP] = useState(false);
@@ -236,7 +235,3 @@ export const TwoFactorLogin: React.FC<OTPProps> = ({ onLoginSuccess }) => {
     </>
   );
 };
-
-
-
-
