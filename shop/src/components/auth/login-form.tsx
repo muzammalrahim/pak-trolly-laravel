@@ -21,6 +21,8 @@ import { AUTH_TOKEN } from "@lib/constants";
 import { useRouter } from "next/router";
 import { ROUTES } from "@lib/routes";
 import { MobileIcon } from "@components/icons/mobile-icon";
+import Link from "next/link";
+import TwoFactorLogin from '@components/auth/otp/two-factor'
 
 interface LoginInputType {
   email: string;
@@ -186,6 +188,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
           </div>
           <div className="relative">
             <Button
+            
               type="submit"
               loading={loading}
               disabled={loading}
@@ -244,6 +247,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
           {t("common:text-register")}
         </button>
       </div>
+      <TwoFactorLogin/>
     </div>
   );
 };

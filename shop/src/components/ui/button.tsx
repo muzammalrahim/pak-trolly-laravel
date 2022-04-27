@@ -31,7 +31,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   const rootClassName = cn(
     "text-[13px] md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-body text-center justify-center border-0 border-transparent placeholder-white focus-visible:outline-none focus:outline-none focus:bg-opacity-80",
     {
-      "bg-bg-blue text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart":
+      "bg-blue text-white px-5 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white hover:bg-gray-600 hover:shadow-cart":
         variant === "flat",
       "h-11 md:h-12 px-5 bg-blue text-white py-2 transform-none normal-case hover:text-white hover:bg-gray-600 hover:shadow-cart":
         variant === "slim",
