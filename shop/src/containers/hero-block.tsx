@@ -21,7 +21,7 @@ type Props = {
 const HeroBlock: React.FC<Props> = ({ data }) => {
 	const { width } = useWindowSize();
 	return (
-		<div className="heroBannerOne relative max-w-[1920px] mb-5 md:mb-12 lg:mb-14 2xl:mb-16 mx-auto overflow-hidden px-4 md:px-8 2xl:px-0">
+		<div className="heroBannerOne relative w-full mb-5 md:mb-12 lg:mb-14 2xl:mb-16 mx-auto overflow-hidden ">
 			<Carousel
 				breakpoints={breakpoints}
 				centeredSlides={width < 1500 ? false : true}
