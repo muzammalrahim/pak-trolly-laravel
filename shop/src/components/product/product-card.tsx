@@ -105,7 +105,7 @@ const ProductCard: FC<ProductProps> = ({
     // const item = generateCartItem(product!, selectedVariation);
     // addItemToCart(item, quantity);
     toast(t("add-to-cart"), {
-      type: "dark",
+      // type: "dark",
       progressClassName: "fancy-progress-bar",
       position: width > 768 ? "bottom-right" : "top-right",
       autoClose: 2000,
