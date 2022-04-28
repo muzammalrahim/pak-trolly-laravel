@@ -85,9 +85,25 @@ const RegistrationForm = () => {
 
 	return (
 		<>
-			{/* <form onSubmit={handleSubmit(onSubmit)} noValidate>
+			<form onSubmit={handleSubmit(onSubmit)} noValidate>
 				
-				
+				<div className="md:flex md:items-center mb-6">
+					<div className="md:w-1/3">
+					<label className="block text-black text-sm font-medium mb-1 md:mb-0 pr-4">
+					Account Type
+					</label>
+					</div>
+					<div className="md:w-2/3">
+					<label className="block text-blue text-sm font-medium mb-1 md:mb-0 pr-4">
+						Bussiness
+					</label>
+						<p className="text-gray-500 text-xs font-normal">
+						Please make sure you have active Business License in order to sell on Daraz as a Corporate
+						</p>
+					
+					</div>
+					
+				</div>
 				<Input
 					label={t("form:input-label-name")}
 					{...register("name")}
@@ -95,14 +111,7 @@ const RegistrationForm = () => {
 					className="mb-4"
 					error={t(errors?.name?.message!)}
 				/>
-				<Input
-					label={t("form:input-label-email")}
-					{...register("email")}
-					type="email"
-					variant="outline"
-					className="mb-4"
-					error={t(errors?.email?.message!)}
-				/>
+				
 				<Input
 					label={t("form:input-label-email")}
 					{...register("email")}
@@ -118,7 +127,7 @@ const RegistrationForm = () => {
 					variant="outline"
 					className="mb-4"
 				/>
-				<Button className="w-full" loading={loading} disabled={loading}>
+				<Button className="w-full bg-blue" loading={loading} disabled={loading}>
 					{t("form:text-register")}
 				</Button>
 
@@ -146,8 +155,11 @@ const RegistrationForm = () => {
 				>
 					{t("form:button-label-login")}
 				</Link>
-			</div> */}
-			<form className="w-full">
+			</div> 
+			<form/>
+
+
+			{/* <form className="w-full">
 				
 				<div className="md:flex md:items-center mb-6">
 					<div className="md:w-1/3">
@@ -162,7 +174,7 @@ const RegistrationForm = () => {
 						<p className="text-gray-500 text-xs font-normal">
 						Please make sure you have active Business License in order to sell on Daraz as a Corporate
 						</p>
-					{/* <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" value="Jane Doe"/> */}
+					
 					</div>
 					
 				</div>
@@ -177,7 +189,7 @@ const RegistrationForm = () => {
 						<input className="appearance-none border border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue" id="inline-full-name" type="text" value="" placeholder="City Name"/>
 					</div>
 					
-				</div>
+				</div> 
 
 				<div className="md:flex md:items-center mb-6">
 					<div className="md:w-1/3">
@@ -191,7 +203,7 @@ const RegistrationForm = () => {
 					
 				</div>
 
-				<div className="md:flex md:items-center mb-6">
+				 <div className="md:flex md:items-center mb-6">
 					<div className="md:w-1/3">
 					<label className="block text-black text-sm font-medium mb-1 md:mb-0 pr-4">
 					Phone#
@@ -201,7 +213,7 @@ const RegistrationForm = () => {
 					<input className=" appearance-none border border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-whit focus:border-blue" id="inline-full-name" type="text" value="" placeholder="Phone Number"/>
 					</div>
 					
-				</div>
+				</div> 
 				<div className="md:flex md:items-center mb-6">
 					<div className="md:w-1/3">
 					<label className="block text-black text-sm font-medium mb-1 md:mb-0 pr-4">
@@ -212,7 +224,7 @@ const RegistrationForm = () => {
 					<input className=" appearance-none border border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-whit focus:border-blue" id="inline-password" type="password" placeholder="******************"/>
 					</div>
 				</div>
-				<div className="md:flex md:items-center mb-6">
+				 <div className="md:flex md:items-center mb-6">
 					<div className="md:w-1/3">
 					<label className="block text-black text-sm font-medium mb-1 md:mb-0 pr-4">
 						Confirm Password
@@ -221,7 +233,8 @@ const RegistrationForm = () => {
 					<div className="md:w-2/3">
 					<input className="appearance-none border border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue" id="inline-password" type="password" placeholder="******************"/>
 					</div>
-				</div>
+				</div> 
+				
 				<div className="md:flex md:items-center mb-6">
 					<div className="md:w-1/3">
 					<label className="block text-black text-sm font-medium mb-1 md:mb-0 pr-4">
@@ -232,16 +245,17 @@ const RegistrationForm = () => {
 					<input className="appearance-none border border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue" id="inline-full-name" type="text" value="" placeholder="Type Your Store Name"/>
 					</div>
 					
-				</div>
+				</div> 
 				<div className="md:flex md:items-center mb-6">
 					<label className=" block text-gray-500 font-bold">
 					<input className="mr-2 leading-tight" type="checkbox"/>
 						<span className="text-sm font-normal">
 							I've read and understood Pak Trollery 
 							<Link href="#"> Terms & Conditions</Link>
-						</span>
+							</span>
 					</label>
 				</div>
+				
 				<Button className="w-full" loading={loading} disabled={loading}>
 					{t("form:text-register")}
 				</Button>
@@ -263,6 +277,7 @@ const RegistrationForm = () => {
 				</div>	
 				
 			</form>
+			*/}
 		</>
 	);
 };
