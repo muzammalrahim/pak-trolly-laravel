@@ -32,8 +32,9 @@ yarn-error.log*
 .envLocal
 server.js
 /pak-trolly-react/node_modules
-.envLive
 .envLocal
+.envLive
+
 # vercel
 .vercel
 vercel.dev.json
