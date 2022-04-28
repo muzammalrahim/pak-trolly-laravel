@@ -28,6 +28,7 @@ export const API_ENDPOINTS = {
   SEND_OTP_CODE: "send-otp-code",
   VERIFY_OTP_CODE: "verify-otp-code",
   OTP_LOGIN: "otp-login",
+  TWO_FACTOR: "two_factor",
   UPDATE_CONTACT: "update-contact",
   CUSTOMERS: "users",
   TAGS: "tags",

@@ -43,7 +43,7 @@ const otpLoginFormSchema = yup.object().shape({
   code: yup
     .string()
     .required("forms:error-code-required")
-    .min(6, "forms:error-min-code"),
+    .min(4, "forms:error-min-code"),
 });
 
 export const OTPLoginForm: React.FC<OTPProps> = ({ onLoginSuccess }) => {

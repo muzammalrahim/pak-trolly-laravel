@@ -18,6 +18,7 @@ export const ROUTES = {
   FAQ: "/faq",
   FORGET_PASSWORD: "/forget-password",
   SHOP: "/shop",
+  TWO_FACTOR: "/two_factor",
   LOGIN: "/signin",
   OTP_LOGIN: "/otp-login",
   SIGN_UP: "/signup",

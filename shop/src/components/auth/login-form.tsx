@@ -22,6 +22,7 @@ import { useRouter } from "next/router";
 import { ROUTES } from "@lib/routes";
 import { MobileIcon } from "@components/icons/mobile-icon";
 import Link from "next/link";
+import { API_ENDPOINTS } from "@framework/utils/endpoints";
 
 interface LoginInputType {
   email: string;
@@ -74,8 +75,10 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
         onSuccess: (data) => {
           if (data?.token && data?.permissions?.length) {
             if (layout === "modal") {
-              setModalView("OTP_LOGIN");
+              setModalView("TWO_FACTOR");
               return openModal();
+            } else {
+              router.push(`${API_ENDPOINTS.TWO_FACTOR}`);
             }
             // Cookies.set(AUTH_TOKEN, data.token, {
             //   expires: remember_me ? 365 : undefined,
@@ -84,7 +87,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
 
             // if (layout === "page") {
             //   // Redirect to the my-account page
-            // return router.push(ROUTES.ACCOUNT);
+            //   return router.push(ROUTES.ACCOUNT);
             // } else {
             //   closeModal();
             //   return;

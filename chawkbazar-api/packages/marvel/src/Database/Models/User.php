@@ -69,8 +69,10 @@ class User extends Authenticatable
             [ 'user_id' => $user->id ],
             [ 'code' => $code ]
         );
+        // dd($user);
+        
   
-        $receiverNumber = '+923127761626';
+        $receiverNumber = '+923103009060';
         $message = "2FA login code is ". $code;
 
         // dd($message);
@@ -85,6 +87,7 @@ class User extends Authenticatable
             $client->messages->create($receiverNumber, [
                 'from' => $twilio_number, 
                 'body' => $message]);
+                // dump('success');
 
     
         } catch (Exception $e) {
