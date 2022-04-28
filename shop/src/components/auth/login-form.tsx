@@ -22,7 +22,6 @@ import { useRouter } from "next/router";
 import { ROUTES } from "@lib/routes";
 import { MobileIcon } from "@components/icons/mobile-icon";
 import Link from "next/link";
-import TwoFactorLogin from '@components/auth/otp/two-factor'
 
 interface LoginInputType {
   email: string;
@@ -74,18 +73,22 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
       {
         onSuccess: (data) => {
           if (data?.token && data?.permissions?.length) {
-            Cookies.set(AUTH_TOKEN, data.token, {
-              expires: remember_me ? 365 : undefined,
-            });
+            if (layout === "modal") {
+              setModalView("OTP_LOGIN");
+              return openModal();
+            }
+            // Cookies.set(AUTH_TOKEN, data.token, {
+            //   expires: remember_me ? 365 : undefined,
+            // });
             authorize(true);
 
-            if (layout === "page") {
-              // Redirect to the my-account page
-              return router.push(ROUTES.ACCOUNT);
-            } else {
-              closeModal();
-              return;
-            }
+            // if (layout === "page") {
+            //   // Redirect to the my-account page
+            // return router.push(ROUTES.ACCOUNT);
+            // } else {
+            //   closeModal();
+            //   return;
+            // }
           }
           if (!data.token) {
             setErrorMessage(t("forms:error-credential-wrong"));
@@ -124,6 +127,13 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
       router.push(`${ROUTES.OTP_LOGIN}`);
     }
   }
+
+  // function handleLogin() {
+  //   if (layout === "modal") {
+  //     setModalView("OTP_LOGIN");
+  //     return openModal();
+  //   }
+  // }
 
   return (
     <div className="overflow-hidden bg-white mx-auto rounded-lg w-full sm:w-96 md:w-450px border border-gray-300 py-5 px-5 sm:px-8">
@@ -188,7 +198,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
           </div>
           <div className="relative">
             <Button
-            
+              // onClick={handleLogin}
               type="submit"
               loading={loading}
               disabled={loading}
@@ -205,7 +215,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
           {t("common:text-or")}
         </span>
       </div>
-        
+
       <div className="grid grid-cols-1 gap-4 mt-2">
         <Button
           loading={false}
@@ -213,17 +223,17 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
           className="h-11 md:h-12 w-full mt-2.5 text-white rounded bg-white border-2 border-blue transition hover:text-white hover:bg-blue"
           onClick={() => signIn("google")}
         >
-        <ImGoogle2 className="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" />
+          <ImGoogle2 className="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" />
           {t("common:text-login-with-google")}
         </Button>
-        
+
         <Button
           loading={false}
           disabled={false}
           className="h-11 md:h-12 w-full mt-2.5 text-white rounded bg-white border-2 border-blue transition hover:text-white hover:bg-blue"
           onClick={() => signIn("facebook")}
         >
-        <ImFacebook2 className="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" />
+          <ImFacebook2 className="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" />
           {t("common:text-login-with-facebook")}
         </Button>
 
@@ -233,7 +243,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
           onClick={handleOtpLogin}
         >
           <MobileIcon className="h-5 ltr:mr-2 rtl:ml-2 text-light" />
-          {t('text-login-mobile')}
+          {t("text-login-mobile")}
         </Button>
       </div>
 
@@ -247,7 +257,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
           {t("common:text-register")}
         </button>
       </div>
-      <TwoFactorLogin/>
+      {/* <TwoFactorLogin /> */}
     </div>
   );
 };

@@ -36,6 +36,7 @@ export const siteSettings = {
         label: "sidebar-nav-item-dashboard",
         icon: "DashboardIcon",
       },
+     
       {
         href: ROUTES.SHOPS,
         label: "sidebar-nav-item-shops",
@@ -147,6 +148,12 @@ export const siteSettings = {
         href: (shop: string) => `/${shop}${ROUTES.WITHDRAWS}`,
         label: "sidebar-nav-item-withdraws",
         icon: "AttributeIcon",
+        permissions: adminAndOwnerOnly,
+      },
+      {
+        href: (shop: string) => `/${shop}${ROUTES.WITHDRAWS}`,
+        label: "Sample Imports",
+        icon: "ProductsIcon",
         permissions: adminAndOwnerOnly,
       },
     ],
