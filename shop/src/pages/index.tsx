@@ -61,7 +61,7 @@ export default function Home() {
         <CategoryBlock sectionHeading="text-shop-by-category" variant="rounded" />
         
         
-        <Container>
+        
         <ProductsFlashSaleBlock 
           date={"2023-03-01T01:02:03"} 
           variant="slider"
@@ -95,7 +95,6 @@ export default function Home() {
           <TestimonialCarousel sectionHeading="text-testimonial" />
           
           
-        </Container>
         <BrandBlock sectionHeading="text-top-brands" />
        
         {/* <CollectionBlock data={collectionData} /> */}

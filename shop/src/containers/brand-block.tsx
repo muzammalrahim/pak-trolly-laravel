@@ -63,7 +63,7 @@ const BrandBlock: React.FC<BrandProps> = ({
   const sliderBrand: Type[] = filterBrands(brands?.data, "slider-layout");
 
   return (
-	  <div className="bg-gray-300 pt-8">
+	  <div className="bg-gray-300 pt-8 mb-16">
 		  <Container>
 			<div className={className}>
 				{/* <SectionHeader sectionHeading={sectionHeading} /> */}
