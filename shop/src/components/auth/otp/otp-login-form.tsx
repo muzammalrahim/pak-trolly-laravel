@@ -58,7 +58,7 @@ export const OTPLoginForm: React.FC<OTPProps> = ({ onLoginSuccess }) => {
     useOtpLoginMutation();
 
   const router = useRouter();
-	const dir = getDirection(router.locale);
+  const dir = getDirection(router.locale);
 
   const {
     register,
@@ -139,12 +139,15 @@ export const OTPLoginForm: React.FC<OTPProps> = ({ onLoginSuccess }) => {
       )}
 
       {!hasOTP ? (
-        <div className={`flex items-center ${dir === 'rtl' ? 'rtl-view': 'ltr-view'}`}>
-          
-          <input type="text" value="FirstName" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="First Name" required/>
-         
+        <div
+          className={`flex items-center ${
+            dir === "rtl" ? "rtl-view" : "ltr-view"
+          }`}
+        >
+          {/* <input type="text" value="FirstName" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="First Name" required/> */}
+
           <PhoneInput
-            country={"us"}
+            country={"pk"}
             value={number}
             onChange={(phone) => setNumber(`+${phone}`)}
             inputClass="!p-0 ltr:!pr-4 rtl:!pl-4 ltr:!pl-14 rtl:!pr-14 !flex !items-center !w-full !appearance-none !transition !duration-300 !ease-in-out !text-heading !text-sm focus:!outline-none focus:!ring-0 !border !border-gray-300 ltr:!border-r-0 rtl:!border-l-0 !rounded ltr:!rounded-r-none rtl:!rounded-l-none focus:!border-black !h-12"

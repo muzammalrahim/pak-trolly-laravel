@@ -29,12 +29,12 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-.envForLive.txt
-.envForLive.ini
+.envLocal
 server.js
 /pak-trolly-react/node_modules
 .envLocal
 .envLive
+
 # vercel
 .vercel
 vercel.dev.json

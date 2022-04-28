@@ -37,7 +37,7 @@ const breakpoints = {
     spaceBetween: 12,
   },
   "0": {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 12,
   },
 };
@@ -123,13 +123,6 @@ const ProductsFlashSaleBlock: React.FC<ProductsProps> = ({
                         imgHeight={138}
                         variant="gridSlim"
                       />
-                      {/* <ProductCard className="mt-5"
-                        key={`product--key${product.id}`}
-                        product={product}
-                        imgWidth={103}
-                        imgHeight={138}
-                        variant="gridSlim"
-                      /> */}
                     </SwiperSlide>
                     
                   ))}

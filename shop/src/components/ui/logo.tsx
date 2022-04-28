@@ -14,7 +14,7 @@ const Logo: React.FC<React.AnchorHTMLAttributes<{}>> = ({
 	return (
 		<Link
 			href={"/"}
-			className={cn("inline-flex focus:outline-none", className)}
+			className={cn("inline-flex focus:outline-none md:absolute lg:relative 2xl:relative xl:relative lg:left-0 2xl:left-0 xl:left-0  lg:text-left 2xl:text-left xl:text-left   lg:inline-block 2xl:inline-block xl:inline-block left-0 md:top-3 left-10 sm:m-auto md:w-auto lg:m-auto sm:w-full sm:block sm:text-center sm:mb-5 md:text-left ", className)}
 			{...props}
 		>
 			<Image

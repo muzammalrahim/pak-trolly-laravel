@@ -67,20 +67,19 @@ export default function CheckoutPage() {
                 atom={shippingAddressAtom}
                 type={AddressType.Shipping}
               />
-              {/* <ScheduleGrid
+              <ScheduleGrid
                 className="shadow-checkoutCard border border-gray-100 rounded-md p-5 md:p-7 bg-white"
                 label={t("text-delivery-schedule")}
                 count={4}
-              /> */}
+              />
             </div>
             <div className="w-full lg:w-[320px] xl:w-[440px] flex-shrink-0 mt-10 sm:mt-12 lg:mt-0">
               <RightSideView />
             </div>
           </div>
         </div>
-        
+        <Subscription />
       </Container>
-      <Subscription />
     </>
   );
 }

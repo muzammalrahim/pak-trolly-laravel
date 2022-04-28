@@ -36,6 +36,7 @@ export const siteSettings = {
         label: "sidebar-nav-item-dashboard",
         icon: "DashboardIcon",
       },
+     
       {
         href: ROUTES.SHOPS,
         label: "sidebar-nav-item-shops",
@@ -101,11 +102,11 @@ export const siteSettings = {
         label: "sidebar-nav-item-shippings",
         icon: "ShippingsIcon",
       },
-      {
-        href: ROUTES.WITHDRAWS,
-        label: "sidebar-nav-item-withdraws",
-        icon: "WithdrawIcon",
-      },
+      // {
+      //   href: ROUTES.WITHDRAWS,
+      //   label: "sidebar-nav-item-withdraws",
+      //   icon: "WithdrawIcon",
+      // },
       {
         href: ROUTES.SETTINGS,
         label: "sidebar-nav-item-settings",
@@ -147,6 +148,12 @@ export const siteSettings = {
         href: (shop: string) => `/${shop}${ROUTES.WITHDRAWS}`,
         label: "sidebar-nav-item-withdraws",
         icon: "AttributeIcon",
+        permissions: adminAndOwnerOnly,
+      },
+      {
+        href: (shop: string) => `/${shop}${ROUTES.SAMPLE_BULK_IMPORTS}`,
+        label: "Sample Imports",
+        icon: "ProductsIcon",
         permissions: adminAndOwnerOnly,
       },
     ],

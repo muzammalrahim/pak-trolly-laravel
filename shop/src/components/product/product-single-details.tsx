@@ -19,6 +19,7 @@ import VariationPrice from "@components/product/product-variant-price";
 import { useTranslation } from "next-i18next";
 import isMatch from "lodash/isMatch";
 import { ROUTES } from "@lib/routes";
+// import Counter from '../product/Counter/Counter'
 
 // interface Props {
 // 	item: any;
@@ -331,7 +332,7 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
                 />
               ) : (
                 <div className="text-base text-red-500 whitespace-nowrap ltr:lg:ml-7 rtl:lg:mr-7">
-                  {t("text-out-stock")}
+                  {t("Out Of stock")}
                 </div>
               )}
             </>
@@ -342,7 +343,7 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
               {selectedVariation?.is_disable ||
               selectedVariation.quantity === 0 ? (
                 <div className="text-base text-red-500 whitespace-nowrap ltr:lg:ml-7 rtl:lg:mr-7">
-                  {t("text-out-stock")}
+                  Out Of stock
                 </div>
               ) : (
                 <Counter
@@ -438,6 +439,10 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
 
             
           </ul>
+
+                      {/* <Counter/> */}
+
+
           <div className="pt-5">
             <ul>
               <li className="inline-block mr-3 align-middle">
@@ -461,7 +466,7 @@ const ProductSingleDetails: React.FC<Props> = ({ product }: any) => {
                       {product?.quantity ||
                       (!isEmpty(selectedVariation) && selectedVariation?.quantity)
                         ? t("text-add-to-cart")
-                        : t("text-out-stock")}
+                        : t("Out Of stock")}
                     </span>
                   </Button>
               </li>

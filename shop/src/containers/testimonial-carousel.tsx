@@ -30,7 +30,7 @@ const breakpoints = {
 
 const TestimonialCarousel: React.FC<TestimonialsProps> = ({
 	sectionHeading,
-	className = "mb-10 md:mb-12 xl:mb-14 md:pb-1 xl:pb-0",
+	className = "mb-8"
 }) => {
 	return (
 		<div className={`heightFull ${className}`}>
