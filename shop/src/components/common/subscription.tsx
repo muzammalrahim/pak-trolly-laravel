@@ -61,9 +61,9 @@ const Subscription: React.FC<Props> = ({ className = "", variant = "default" }) 
 										? 'url(/assets/images/subscription-bg-reverse.png)'
 										: 'url(/assets/images/subscription-bg.png)',
 									}}
-									className={`hidden z-0 xl:block bg-no-repeat ${
+									className={`hidden z-0 xl:block bg-no-repeat bg-blue ${
 									dir === 'rtl'
-										? 'bg-left 2xl:-left-12 3xl:left-0'
+										? 'bg-left 2xl:-left-12 3xl:left-0 '
 										: 'bg-right xl:-right-24 2xl:-right-20 3xl:right-0'
 									} bg-contain xl:bg-cover 3xl:bg-contain absolute h-full w-full top-0`}
 								/>
