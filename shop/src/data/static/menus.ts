@@ -53,7 +53,7 @@ export const menu = [
   },
   {
     id: 2,
-    path: "/search?category=men",
+    path: "/products",
     label: "Electronics",
     // columns: [
     //   {

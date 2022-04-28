@@ -308,7 +308,7 @@ const ProductCard: FC<ProductProps> = ({
                       {product?.quantity ||
                       (!isEmpty(selectedVariation) && selectedVariation?.quantity)
                         ? t("text-add-to-cart")
-                        : t("text-out-stock")}
+                        : t("Out Of Stock")}
                     </span>
                   </Button>
      </div>
