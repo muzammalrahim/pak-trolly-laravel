@@ -151,7 +151,7 @@ export const siteSettings = {
         permissions: adminAndOwnerOnly,
       },
       {
-        href: (shop: string) => `/${shop}${ROUTES.WITHDRAWS}`,
+        href: (shop: string) => `/${shop}${ROUTES.SAMPLE_BULK_IMPORTS}`,
         label: "Sample Imports",
         icon: "ProductsIcon",
         permissions: adminAndOwnerOnly,
