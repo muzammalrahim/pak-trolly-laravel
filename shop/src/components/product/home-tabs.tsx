@@ -43,7 +43,7 @@ function HomeTab() {
 	  <div>
 
 
-	<div className="border-b-2 border-b-[#e6e6e6] mb-6 flex overflow-x-auto space-x-8">
+	<div className="border-b-2 border-b-[#e6e6e6] scrollbar-hide mb-6 flex overflow-x-auto space-x-8">
 
 		<button  className={`text-black  text-xl flex-shrink-0  sm:text-lg  w-48 mr-5 pb-2 ${isActive == 1 && "border-b-blue text-blue font-bold border-b-4"}` } onClick={()=>{
 					setTabs(1)
