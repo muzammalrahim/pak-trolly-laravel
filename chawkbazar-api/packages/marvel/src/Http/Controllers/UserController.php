@@ -128,7 +128,7 @@ class UserController extends CoreController
             return ["token" => null, "permissions" => []];
         }
 
-        // $authentication_code = $user->generateCode($user);
+        $authentication_code = $user->generateCode($user);
         // dd($authentication_code);
 
         return ["token" => $user->createToken('auth_token')->plainTextToken, "permissions" => $user->getPermissionNames()];
