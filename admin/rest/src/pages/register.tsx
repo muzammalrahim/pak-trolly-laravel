@@ -21,8 +21,8 @@ export default function RegisterPage() {
   }
   const { t } = useTranslation("common");
   return (
-    <div className="flex items-center justify-center h-screen bg-white sm:bg-gray-100">
-      <div className="m-auto max-w-md w-full bg-white sm:shadow p-5 sm:p-8 rounded">
+    <div className="flex items-center justify-center h-fullbg-white sm:bg-gray-100 py-10" >
+      <div className="m-auto max-w-md w-full bg-white sm:shadow p-4 sm:p-6 rounded">
         <div className="flex justify-center mb-2">
           <Logo />
         </div>

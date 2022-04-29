@@ -23,4 +23,5 @@ export const ROUTES = {
   PROFILE_UPDATE: "/profile-update",
   LOGOUT: "/logout",
   STAFFS: "/staffs",
+  SAMPLE_BULK_IMPORTS: "/sample-bulk-imports",
 };
