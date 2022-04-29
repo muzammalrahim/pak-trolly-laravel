@@ -115,22 +115,22 @@ const SignUpForm: React.FC<Props> = ({ layout = "modal" }) => {
 
   return (
     <div className="py-5 px-5 sm:px-8 bg-white mx-auto rounded-lg w-full sm:w-96 md:w-450px border border-gray-300">
-      <div className="text-center mb-6 pt-2.5">
-        <div onClick={closeModal}>
+      <div className="text-center mb-6 pt-2.5 clear-both">
+        <div className="logo_sigup" onClick={closeModal}>
           <Logo />
         </div>
         <p className="text-sm md:text-base text-body mt-2 mb-8 sm:mb-10">
           {t("common:registration-helper")}{" "}
           <Link
             href={ROUTES.TERMS}
-            className="text-heading underline hover:no-underline focus:outline-none"
+            className="text-heading text-blue capitalize underline hover:no-underline focus:outline-none"
           >
             {t("common:text-terms")}
           </Link>{" "}
           &amp;{" "}
           <Link
             href={ROUTES.POLICY}
-            className="text-heading underline hover:no-underline focus:outline-none"
+            className="text-heading text-blue capitalize underline hover:no-underline focus:outline-none"
           >
             {t("common:text-policy")}
           </Link>
@@ -197,7 +197,7 @@ const SignUpForm: React.FC<Props> = ({ layout = "modal" }) => {
         type="submit"
         loading={false}
         disabled={isLoading}
-        className="h-11 md:h-12 w-full mt-2.5 text-white rounded hover:bg-blue hover:text-white "
+        className="h-11 md:h-12 w-full mt-2.5 text-white rounded bg-googleplus border-2 border-googleplus transition hover:text-white hover:bg-white hover:text-googleplus hover:border-2 hover:border-googleplus "
       >
         <ImGoogle2 className="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" />
         {t("common:text-login-with-google")}

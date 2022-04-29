@@ -220,7 +220,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
         <Button
           loading={false}
           disabled={false}
-          className="h-11 md:h-12 w-full mt-2.5 text-white rounded bg-white border-2 border-blue transition hover:text-white hover:bg-blue"
+          className="h-11 md:h-12 w-full mt-2.5 text-white rounded bg-googleplus border-2 border-googleplus transition hover:text-white hover:bg-white hover:text-googleplus hover:border-2 hover:border-googleplus"
           onClick={() => signIn("google")}
         >
           <ImGoogle2 className="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" />
@@ -230,7 +230,7 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
         <Button
           loading={false}
           disabled={false}
-          className="h-11 md:h-12 w-full mt-2.5 text-white rounded bg-white border-2 border-blue transition hover:text-white hover:bg-blue"
+          className="h-11 md:h-12 w-full bg-sky mt-2.5 text-white rounded  border-2 border-sky transition  hover:text-white hover:bg-white hover:text-sky hover:border-2 hover:border-sky"
           onClick={() => signIn("facebook")}
         >
           <ImFacebook2 className="text-sm sm:text-base ltr:mr-1.5 rtl:ml-1.5" />
@@ -238,11 +238,11 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
         </Button>
 
         <Button
-          className="h-11 md:h-12 w-full mt-1.5"
+          className="h-11 md:h-12 w-full rounded mt-1.5 bg-black hover:bg-white hover:text-black hover:border-2 hover:border-black"
           disabled={loading}
           onClick={handleOtpLogin}
         >
-          <MobileIcon className="h-5 ltr:mr-2 rtl:ml-2 text-light" />
+          <MobileIcon className="h-5 ltr:mr-2 rtl:ml-2 text-light " />
           {t("text-login-mobile")}
         </Button>
       </div>

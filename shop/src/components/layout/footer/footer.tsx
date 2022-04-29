@@ -16,9 +16,9 @@ const Footer: React.FC = () => (
   <footer className="bg-gray-900 border-heading pt-5 pb-3 md:pb-1 lg:pt-0 2xl:pt-10">
     <Container>
     <div className="flex flex-col md:flex-row mb-4 gap-5">   
-        <div className="w-ful md:w-1/4 ">
+        <div className="w-ful md:w-1/4 md:pb-4 sm:pb-4">
           <div className="">
-            <h3 className="text-white text-sm md:text-base xl:text-lg font-semibold mb-2 2xl:mb-6 3xl:mb-7">
+            <h3 className="text-white text-xl font-semibold mb-2 2xl:mb-6 3xl:mb-7">
               About Information
             </h3>
             <div>
@@ -30,8 +30,8 @@ const Footer: React.FC = () => (
           </div>
         </div>
 
-        <div className="w-ful md:w-1/4 ">
-          <h3 className="text-white text-sm md:text-base xl:text-lg font-semibold mb-2 2xl:mb-6 3xl:mb-7">
+        <div className="w-ful md:w-1/4 md:pb-4 sm:pb-4">
+          <h3 className="text-white text-xl font-semibold mb-2 2xl:mb-6 3xl:mb-7">
               Product
             </h3>
           <ul>
@@ -65,8 +65,8 @@ const Footer: React.FC = () => (
         </div>
 
 
-        <div className="w-ful md:w-1/4 ">
-          <h3 className="text-white text-sm md:text-base xl:text-lg font-semibold mb-2 2xl:mb-6 3xl:mb-7">
+        <div className="w-ful md:w-1/4 md:pb-4 sm:pb-4">
+          <h3 className="text-white text-xl font-semibold mb-2 2xl:mb-6 3xl:mb-7">
              Company
           </h3>
           <ul className="">
@@ -99,8 +99,8 @@ const Footer: React.FC = () => (
           </ul>
         </div>
 
-        <div className="w-ful md:w-1/4 ">
-          <h3 className="text-white text-sm md:text-base xl:text-lg font-semibold mb-2 2xl:mb-6 3xl:mb-7">
+        <div className="w-ful md:w-1/4 md:pb-4 sm:pb-4">
+          <h3 className="text-white text-xl font-semibold mb-2 2xl:mb-6 3xl:mb-7">
             Contact Information
           </h3>
           <ul className="">

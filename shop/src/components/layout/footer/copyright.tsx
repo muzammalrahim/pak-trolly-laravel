@@ -21,7 +21,7 @@ const Copyright: React.FC<CopyrightProps> = ({ payment }) => {
     <div className="border-t text-center border-gray-300 pt-5 pb-16 sm:pb-20 md:pb-5 mb-2 sm:mb-0">
       <Container className="flex justify-center md:flex-row text-center">
         <Link href="https://creativetech-solutions.com/">
-            <a className="text-blue text-xs md:text-[13px] lg:text-sm leading-6">
+            <a className="text-blue text-sm leading-6">
             &copy; {t("text-copyright")}  
             {/* {year}&nbsp; */}
               {/* <a
