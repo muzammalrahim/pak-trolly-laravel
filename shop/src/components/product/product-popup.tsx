@@ -264,7 +264,7 @@ export default function ProductPopup({ productSlug }: { productSlug: string }) {
             <Button
               onClick={navigateToProductPage}
               variant="flat"
-              className="w-full h-11 md:h-12"
+              className="w-full h-11 md:h-12 bg-black"
             >
               {t("text-view-details")}
             </Button>
