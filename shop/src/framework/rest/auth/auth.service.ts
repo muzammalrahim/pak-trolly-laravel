@@ -1,5 +1,5 @@
-import { CoreApi } from '@framework/utils/core-api';
-import { API_ENDPOINTS } from '@framework/utils/endpoints';
+import { CoreApi } from "@framework/utils/core-api";
+import { API_ENDPOINTS } from "@framework/utils/endpoints";
 
 export type LoginInputType = {
   email: string;
@@ -53,10 +53,15 @@ export type UpdateContactInput = {
   user_id: string;
 };
 
+export type TwoFactor = {
+  code: string;
+};
+
 class Auth extends CoreApi {
   login(input: LoginInputType) {
     return this.http.post(API_ENDPOINTS.LOGIN, input).then((res) => res.data);
   }
+
   socialLogin(input: SocialLoginInputType) {
     return this.http
       .post(API_ENDPOINTS.SOCIAL_LOGIN, input)
@@ -75,6 +80,11 @@ class Auth extends CoreApi {
   otpLogin(input: OtpLoginInputType) {
     return this.http
       .post(API_ENDPOINTS.OTP_LOGIN, input)
+      .then((res) => res.data);
+  }
+  twoFactor(input: TwoFactor) {
+    return this.http
+      .post(API_ENDPOINTS.TWO_FACTOR, input)
       .then((res) => res.data);
   }
   updateContact(input: UpdateContactInput) {
@@ -112,4 +122,4 @@ class Auth extends CoreApi {
   }
 }
 
-export const AuthService = new Auth('auth');
+export const AuthService = new Auth("auth");

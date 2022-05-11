@@ -33,7 +33,8 @@ const ManagedModal: React.FC = () => {
   return (
     <Modal open={displayModal} onClose={closeModal} variant={modalVariant}>
       {modalView === "LOGIN_VIEW" && <LoginForm />}
-      {modalView === "OTP_LOGIN" && <TwoFactorLogin />}
+      {/* {modalView === "OTP_LOGIN" && <TwoFactorLogin />} */}
+      {modalView === "TWO_FACTOR" && <TwoFactorLogin />}
       {modalView === "OTP_LOGIN_VIEW" && <OtpLogin />}
       {modalView === "SIGN_UP_VIEW" && <SignUpForm />}
       {modalView === "FORGET_PASSWORD" && <ForgetPasswordForm />}

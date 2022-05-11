@@ -32,6 +32,7 @@ Route::post('/social-login-token', 'Marvel\Http\Controllers\UserController@socia
 Route::post('/send-otp-code', 'Marvel\Http\Controllers\UserController@sendOtpCode');
 Route::post('/verify-otp-code', 'Marvel\Http\Controllers\UserController@verifyOtpCode');
 Route::post('/otp-login', 'Marvel\Http\Controllers\UserController@otpLogin');
+Route::post('/two_factor', 'Marvel\Http\Controllers\UserController@twoFactor');
 
 Route::apiResource('products', ProductController::class, [
     'only' => ['index', 'show']

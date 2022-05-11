@@ -1,10 +1,11 @@
-import { useMutation, UseMutationOptions } from 'react-query';
+import { useMutation, UseMutationOptions } from "react-query";
 import {
   AuthService,
   ChangePasswordInputType,
   ForgetPasswordInputType,
   LoginInputType,
   OtpLoginInputType,
+  TwoFactor,
   RegisterUserInputType,
   ResetPasswordInputType,
   SendOtpCodeInputType,
@@ -12,7 +13,7 @@ import {
   UpdateContactInput,
   VerifyOtpInputType,
   VerifyPasswordInputType,
-} from './auth.service';
+} from "./auth.service";
 
 export const useChangePasswordMutation = () => {
   return useMutation((input: ChangePasswordInputType) =>
@@ -36,6 +37,10 @@ export const useLogoutMutation = () => {
 
 export const useOtpLoginMutation = () => {
   return useMutation((input: OtpLoginInputType) => AuthService.otpLogin(input));
+};
+
+export const useTwoFactorMutation = () => {
+  return useMutation((input: TwoFactor) => AuthService.twoFactor(input));
 };
 
 export const useRegisterMutation = () => {
