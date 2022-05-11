@@ -32,6 +32,18 @@ const AVAILABLE_PAYMENT_METHODS_MAP: Record<
     icon: "",
     component: CashOnDelivery,
   },
+  JAZZ_CASH: {
+    name: "Jazz Cash",
+    value: "JAZZ_CASH",
+    icon: "",
+    component: CashOnDelivery,
+  },
+  EASY_PAISA: {
+    name: "Easy Paisa",
+    value: "EASY_PAISA",
+    icon: "",
+    component: CashOnDelivery,
+  },
 };
 
 const PaymentGrid: React.FC<{ className?: string }> = ({ className }) => {

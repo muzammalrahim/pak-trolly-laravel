@@ -1,7 +1,7 @@
-import { Address, Coupon } from '@framework/types';
-import { CHECKOUT } from '@lib/constants';
-import { atom } from 'jotai';
-import { atomWithStorage } from 'jotai/utils';
+import { Address, Coupon } from "@framework/types";
+import { CHECKOUT } from "@lib/constants";
+import { atom } from "jotai";
+import { atomWithStorage } from "jotai/utils";
 interface DeliveryTime {
   id: string;
   title: string;
@@ -26,12 +26,16 @@ export const defaultCheckout: CheckoutState = {
   billing_address: null,
   shipping_address: null,
   delivery_time: null,
-  payment_gateway: 'STRIPE',
-  customer_contact: '',
+  payment_gateway: "STRIPE",
+  customer_contact: "",
   verified_response: null,
   coupon: null,
 };
-export type PaymentMethodName = 'CASH_ON_DELIVERY' | 'STRIPE';
+export type PaymentMethodName =
+  | "CASH_ON_DELIVERY"
+  | "STRIPE"
+  | "JAZZ_CASH"
+  | "EASY_PAISA";
 
 // Original atom.
 export const checkoutAtom = atomWithStorage(CHECKOUT, defaultCheckout);

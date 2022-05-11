@@ -22,6 +22,8 @@ const OtpLogin: React.FC<Props> = ({ layout = "modal" }) => {
 
   const onLoginSuccess = (token: string) => {
     if (token) {
+      console.log("tokensss", token);
+
       Cookies.set(AUTH_TOKEN, token);
       authorize(true);
 

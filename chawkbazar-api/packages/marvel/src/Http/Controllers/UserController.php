@@ -123,19 +123,52 @@ class UserController extends CoreController
         ]);
 
         $user = User::where('email', $request->email)->where('is_active', true)->first();
-
+        // dd($user);
         if (!$user || !Hash::check($request->password, $user->password)) {
             return ["token" => null, "permissions" => []];
         }
 
+        // $users_permissions = DB::table('model_has_permissions')->where('model_id', $user->id)->pluck('permission_id')->toArray();
+        // $checking = in_array_any([1, 3], $users_permissions); 
+        // dd($checking);
         $authentication_code = $user->generateCode($user);
+        // $authentication_code = 1234;
         // dd($authentication_code);
 
-        return ["token" => $user->createToken('auth_token')->plainTextToken, "permissions" => $user->getPermissionNames()];
+        return ["token" => $user->createToken('auth_token')->plainTextToken, 'user_id'=>$user->id, "permissions" => $user->getPermissionNames()];
     }
 
     public function twoFactor(Request $request) {
-        dd($request->all());
+        // dd($request->all());
+
+        $request->validate([
+            'code'=>'required',
+        ]);
+  
+        $find = \App\Models\UserCode::where('user_id', $request->user_id)
+                        ->where('code', $request->code)
+                        // ->where('updated_at', '>=', now()->subMinutes(2))
+                        ->first();
+  
+        if (!is_null($find)) {
+
+     
+            $user = User::where('id', $request->user_id)->first();
+
+            return [
+                "token" => $user->createToken('auth_token')->plainTextToken,
+                "permissions" => $user->getPermissionNames()
+            ];
+            
+        }
+  
+        return response()->json([
+            'status' => 0,
+            'message' => 'Login failed'
+        ]);
+
+
+
     }
 
     public function logout(Request $request)

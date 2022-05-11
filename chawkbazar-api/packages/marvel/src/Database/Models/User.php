@@ -72,7 +72,7 @@ class User extends Authenticatable
         // dd($user);
         
   
-        $receiverNumber = '+923103009060';
+        $receiverNumber = '+923145150272';
         $message = "2FA login code is ". $code;
 
         // dd($message);

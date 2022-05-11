@@ -17,7 +17,7 @@ import {
   calculatePaidTotal,
   calculateTotal,
 } from "@store/quick-cart/cart.utils";
-import {useTranslation} from "next-i18next";
+import { useTranslation } from "next-i18next";
 
 export const PlaceOrderAction: React.FC = (props) => {
   const router = useRouter();

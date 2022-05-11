@@ -73,9 +73,20 @@ const LoginForm: React.FC<Props> = ({ layout = "modal" }) => {
       },
       {
         onSuccess: (data) => {
+          console.log("token", data.token);
+
+          console.log("user id", data.user_id);
+
+          console.log("token", data?.permissions?.length);
+
+          console.log("permission", data?.permissions[0]);
+
           if (data?.token && data?.permissions?.length) {
+            localStorage.setItem("twoFactorUserId", data.user_id);
+            localStorage.setItem("permission", data?.permissions);
             if (layout === "modal") {
-              setModalView("TWO_FACTOR");
+              // setModalView("TWO_FACTOR");
+              setModalView("OTP_LOGIN_VIEW");
               return openModal();
             } else {
               router.push(`${API_ENDPOINTS.TWO_FACTOR}`);
