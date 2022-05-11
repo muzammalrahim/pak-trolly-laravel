@@ -215,4 +215,13 @@ class ShopController extends CoreController
         $user = $request->user;
         return $this->repository->where('owner_id', '=', $user->id)->get();
     }
+
+
+    public function sampleBulkImports(Request $request)
+    {
+        dd('here');
+        $user = $request->user;
+        return $this->repository->where('owner_id', '=', $user->id)->get();
+    }
+
 }

@@ -28,6 +28,7 @@ import { ROUTES } from "@lib/routes";
 
 
 
+
 interface ProductProps {
   product: Product;
   className?: string;
@@ -104,7 +105,7 @@ const ProductCard: FC<ProductProps> = ({
     // const item = generateCartItem(product!, selectedVariation);
     // addItemToCart(item, quantity);
     toast(t("add-to-cart"), {
-      type: "dark",
+      // type: "dark",
       progressClassName: "fancy-progress-bar",
       position: width > 768 ? "bottom-right" : "top-right",
       autoClose: 2000,
@@ -215,9 +216,10 @@ const ProductCard: FC<ProductProps> = ({
         )}
       >
         
-        <h2
+       <div className='h-16 overflow-hidden'>
+       <h2
           className={cn("text-heading font-semibold truncate mb-1", {
-            "text-sm md:text-base": variant === "grid",
+            "text-sm md:text-base text-lg": variant === "grid",
             "md:mb-1.5 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg":
               variant === "gridSlim",
             "text-sm sm:text-base md:mb-1.5 pb-0": variant === "listSmall",
@@ -232,6 +234,8 @@ const ProductCard: FC<ProductProps> = ({
             {description}
           </p>
         )}
+       </div>
+       <div className="h-14 overflow-hidden">
         <div
           className={`text-heading font-semibold text-sm sm:text-base mt-1.5 space-x-1 rtl:space-x-reverse ${
             variant === "grid"
@@ -240,10 +244,13 @@ const ProductCard: FC<ProductProps> = ({
           }`}
         >
           {product_type.toLocaleLowerCase() === "variable" ? (
+           
             <>
-              <span className="inline-block line-through text-gray-500">{minPrice}</span>
+              
+              <span className="inline-block line-through text-gray-500 text-sm">{minPrice}</span>
               {/* <span> - </span> */}
-              <span className="inline-block text-blue text-2xl font-semibold pl-3">{maxPrice}</span>
+              <span className="inline-block text-blue text-2xl font-semibold pl-3 text-sm">{maxPrice}</span>
+              
             </>
           ) : (
             <>
@@ -255,10 +262,12 @@ const ProductCard: FC<ProductProps> = ({
                 </del>
               )}
             </>
+           
           )}
 
 
         </div>
+         </div>
         <div className="inline-grid grid-cols-5 gap-1.5 mt-3 lg:mt-5">
 					{Array.from({ length: 4}).map((_, idx) => (
 						<StarIcon key={idx} />
@@ -285,14 +294,21 @@ const ProductCard: FC<ProductProps> = ({
                     }
                     loading={addToCartLoader}
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                    <span className="py-2 text-lg pl-0 pr-0">
+                   <svg width="36" height="36" viewBox="0 0 39 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M39 19.5955C39 19.1747 38.6588 18.8346 38.2391 18.8346H10.8243C10.6522 18.8346 10.501 18.7251 10.4463 18.561L6.03581 4.21751C5.20524 1.69496 5.20225 0 2.54642 0H0.760942C0.340186 0 0 0.341181 0 0.760942C0 1.1807 0.34118 1.52188 0.760942 1.52188H2.54642C3.76094 1.52387 3.91611 2.3813 4.58952 4.69297L9 19.0365C9.25961 19.8253 9.99271 20.3554 10.8233 20.3554H38.2391C38.6588 20.3564 39 20.0153 39 19.5955Z" fill="white"/>
+                      <path d="M18.7888 21.4397C17.5872 21.4397 16.6134 22.4135 16.6134 23.6151C16.6134 24.8167 17.5872 25.7905 18.7888 25.7905C19.9904 25.7905 20.9642 24.8167 20.9642 23.6151C20.9642 22.4145 19.9894 21.4397 18.7888 21.4397Z" fill="white"/>
+                      <path d="M29.1426 21.4397C27.941 21.4397 26.9672 22.4135 26.9672 23.6151C26.9672 24.8167 27.941 25.7905 29.1426 25.7905C30.3442 25.7905 31.317 24.8167 31.317 23.6151C31.317 22.4145 30.3442 21.4397 29.1426 21.4397Z" fill="white"/>
+                      <path d="M37.0096 17.0521C37.0255 17.0054 37.0354 16.9556 37.0354 16.9039C37.0354 16.6642 36.8405 16.4692 36.5998 16.4692L23.1445 16.4702C22.9048 16.4702 22.7098 16.6662 22.7098 16.9059C22.7098 17.1456 22.9048 17.3406 23.1455 17.3406L36.6008 17.3386C36.7888 17.3386 36.9489 17.2192 37.0096 17.0521Z" fill="white"/>
+                      <path d="M30.555 2.25297L25.9715 1.9486L30.5541 1.64422L30.6008 1.64124C30.7669 1.64521 30.9012 1.78149 30.9012 1.9486C30.9012 2.1157 30.7669 2.25198 30.6008 2.25596L30.555 2.25297Z" fill="white"/>
+                      <path d="M32.1038 4.72877L26.2311 4.33785L32.1028 3.94793L32.1624 3.94495C32.3753 3.94992 32.5474 4.12399 32.5474 4.33885C32.5474 4.5537 32.3753 4.72777 32.1624 4.73274L32.1038 4.72877Z" fill="white"/>
+                      <path d="M33.2815 7.37571L26.62 6.93307L33.2795 6.49043L33.3471 6.48645C33.5888 6.49242 33.7838 6.68937 33.7838 6.93307C33.7838 7.17577 33.5888 7.37372 33.3471 7.37969L33.2815 7.37571Z" fill="white"/>
+                  </svg>
+                    
+                    <span className="py-2 text-lg pl-2 pr-0">
                       {product?.quantity ||
                       (!isEmpty(selectedVariation) && selectedVariation?.quantity)
                         ? t("text-add-to-cart")
-                        : t("text-out-stock")}
+                        : t("Out Of Stock")}
                     </span>
                   </Button>
      </div>

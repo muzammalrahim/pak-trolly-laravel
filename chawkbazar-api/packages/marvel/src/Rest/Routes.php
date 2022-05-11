@@ -138,10 +138,12 @@ Route::group(
         Route::apiResource('withdraws', WithdrawController::class, [
             'only' => ['store', 'index', 'show']
         ]);
+        
         Route::post('staffs', 'Marvel\Http\Controllers\ShopController@addStaff');
         Route::delete('staffs/{id}', 'Marvel\Http\Controllers\ShopController@deleteStaff');
         Route::get('staffs', 'Marvel\Http\Controllers\UserController@staffs');
         Route::get('my-shops', 'Marvel\Http\Controllers\ShopController@myShops');
+        Route::get('sample-bulk-imports', 'Marvel\Http\Controllers\ShopController@sampleBulkImports');
     }
 );
 

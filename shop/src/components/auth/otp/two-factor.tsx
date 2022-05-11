@@ -138,22 +138,25 @@ const TwoFactorLogin: React.FC<Props> = ({ layout = "modal" }) => {
   };
 
   return (
-    <div className="py-6 px-5 sm:p-8 bg-white mx-auto rounded-lg w-full sm:w-96 md:w-450px border border-gray-300">
+    <>
+     <div className="py-6 px-5 sm:p-8 bg-white mx-auto rounded-lg w-full sm:w-96 md:w-450px border border-gray-300">
       <div className="text-center mb-9 pt-2.5">
         <div onClick={closeModal}>
           <Logo />
         </div>
         <p className="text-sm md:text-base text-body mt-3 sm:mt-4 mb-8 sm:mb-10">
-          {/* Enter your 5-Digit Code. */}
+          {/* {/ Enter your 5-Digit Code. /} */}
           We'll send you a link to reset your password
         </p>
       </div>
+
 
       {/* <OTPLoginForm onLoginSuccess={onLoginSuccess} /> */}
       <form onSubmit={handleSubmit(onOtpLoginSubmission)}>
         <div>
           <Label>{t("text-otp-code")}</Label>
           {/* <MobileOtpInput
+
           // value={value}
           // onChange={onChange}
           numInputs={4}
@@ -223,6 +226,8 @@ const TwoFactorLogin: React.FC<Props> = ({ layout = "modal" }) => {
         </button>
       </div>
     </div>
+    </>
+   
   );
 };
 

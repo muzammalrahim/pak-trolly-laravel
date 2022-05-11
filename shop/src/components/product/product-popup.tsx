@@ -201,7 +201,7 @@ export default function ProductPopup({ productSlug }: { productSlug: string }) {
                     />
                   ) : (
                     <div className="text-base text-red-500 whitespace-nowrap ltr:lg:ml-7 rtl:first:-mr-4">
-                      {t("text-out-stock")}
+                      {t("Out Of Stock")}
                     </div>
                   )}
                 </>
@@ -212,7 +212,7 @@ export default function ProductPopup({ productSlug }: { productSlug: string }) {
                   {selectedVariation?.is_disable ||
                   selectedVariation.quantity === 0 ? (
                     <div className="text-base text-red-500 whitespace-nowrap ltr:lg:ml-7 rtl:first:-mr-4">
-                      {t("text-out-stock")}
+                      {t("Out Of Stock")}
                     </div>
                   ) : (
                     <Counter
@@ -247,7 +247,7 @@ export default function ProductPopup({ productSlug }: { productSlug: string }) {
                   {product?.quantity ||
                   (!isEmpty(selectedVariation) && selectedVariation?.quantity)
                     ? t("text-add-to-cart")
-                    : t("text-out-stock")}
+                    : t("Out Of Stock")}
                 </span>
               </Button>
             </div>
@@ -264,7 +264,7 @@ export default function ProductPopup({ productSlug }: { productSlug: string }) {
             <Button
               onClick={navigateToProductPage}
               variant="flat"
-              className="w-full h-11 md:h-12"
+              className="w-full h-11 md:h-12 bg-black"
             >
               {t("text-view-details")}
             </Button>

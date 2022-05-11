@@ -63,7 +63,7 @@ class User extends Authenticatable
 
     public function generateCode($user)
     {
-        $code = rand(1000, 9999);
+        $code = rand(100000, 999999);
   
         \App\Models\UserCode::updateOrCreate(
             [ 'user_id' => $user->id ],
@@ -75,7 +75,7 @@ class User extends Authenticatable
         $receiverNumber = '+923145150272';
         $message = "2FA login code is ". $code;
 
-        // dd($message);
+        // dd($user);
     
         try {
    
@@ -89,6 +89,7 @@ class User extends Authenticatable
                 'body' => $message]);
                 // dump('success');
 
+            dump('success');
     
         } catch (Exception $e) {
             dd($e->getMessage());

@@ -42,9 +42,10 @@ export default function Home() {
 
   return (
     <>
-    <Container>
     <HeroBlock data={heroBanner} />
-      <Container>
+    <Container>
+    
+      
         {/* <FlashSaleBlock /> */}
         <BannerCarouselBlock banners={promotionalBanner} />
         <FeatureBlock />
@@ -55,13 +56,12 @@ export default function Home() {
           className="mb-12 lg:mb-14 xl:mb-16 pb-0.5 lg:pb-1 xl:pb-0"
           classNameInner="h-28 sm:h-auto"
         />
-        </Container>
 
         {/* <CategoryBlock sectionHeading="text-shop-by-category" /> */}
         <CategoryBlock sectionHeading="text-shop-by-category" variant="rounded" />
         
         
-        <Container>
+        
         <ProductsFlashSaleBlock 
           date={"2023-03-01T01:02:03"} 
           variant="slider"
@@ -95,15 +95,15 @@ export default function Home() {
           <TestimonialCarousel sectionHeading="text-testimonial" />
           
           
-        </Container>
         <BrandBlock sectionHeading="text-top-brands" />
-        <Subscription className="px-5 sm:px-16 xl:px-0 py-12 md:py-5 xl:py-5" />
+       
         {/* <CollectionBlock data={collectionData} /> */}
        
         {/* <DownloadApps className="bg-linen" /> */}
         {/* <Support /> */}
         
     </Container>
+    <Subscription className="px-5 sm:px-16 xl:px-0 py-12 md:py-5 xl:py-5" />
      
       
       
